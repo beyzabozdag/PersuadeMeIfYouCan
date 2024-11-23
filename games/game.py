@@ -28,8 +28,23 @@ class PersuasionGameDefaultParser(GameParser):
     
     def parse(self, response):
         ms = PersuasionAgentMessage()
-        message = get_tag_contents(response, MESSAGE_TAG)
-        ms.add_public(MESSAGE_TAG, message)
+        try:
+            if MESSAGE_TAG in response:
+                message = get_tag_contents(response, MESSAGE_TAG)
+                ms.add_public(MESSAGE_TAG, message)
+
+            if RANKING_TAG in response:
+                ranking = get_tag_contents(response, RANKING_TAG)
+                ms.add_secret(RANKING_TAG, ranking)
+
+            if FINAL_DECISION_TAG in response:
+                final_decision = get_tag_contents(response, FINAL_DECISION_TAG)
+                ms.add_secret(FINAL_DECISION_TAG, final_decision)
+                ms.add_public(MESSAGE_TAG, "") # no further message to the other agent
+        
+        except Exception as e:
+            print(f"Error parsing response: {response}")
+            
         return ms
         
 

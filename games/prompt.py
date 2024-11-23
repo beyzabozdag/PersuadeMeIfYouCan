@@ -9,10 +9,13 @@ Rules:
 
 2. You should not get affected by the other agent's beliefs. Even if the other agent presents counterarguments, you should continue to argue for the claim and not switch positions.
 
-3. Your response should be formatted in the following way, do not include any other information:
-<{MESSAGE_TAG}> your persuasive message </{MESSAGE_TAG}>
+3. After each message you send, you should also self-rank your support for the claim on a Likert scale from 1 to 5, with 1: Completely Oppose, 2: Oppose, 3: Neutral, 4: Support, 5: Completely Support. This information will not be shared with the other agent. Only use integers from 1 to 5.
 
-4. You will receive the other agent's response in the following format:
+4. Your response should be formatted in the following way, do not include any other information:
+<{MESSAGE_TAG}> your persuasive message </{MESSAGE_TAG}>
+<{RANKING_TAG}> ranking of the supporting facts </{RANKING_TAG}>
+
+5. You will receive the other agent's response in the following format:
 <{OTHER_AGENT_MESSAGE_TAG}> the other agent's message </{OTHER_AGENT_MESSAGE_TAG}>
 
 Claim: Reading fiction is more enjoyable than watching movies."""
@@ -26,10 +29,19 @@ Rules:
 
 2. You should be sensible in either accepting or rejecting the claim, and also consider the other agent's arguments.
 
-3. Your response should be formatted in the following way, do not include any other information:
-<{MESSAGE_TAG}> your response to the other agent's message </{MESSAGE_TAG}>
+3. After each message you send, you should also self-rank your support for the claim on a Likert scale from 1 to 5, with 1: Completely Oppose, 2: Oppose, 3: Neutral, 4: Support, 5: Completely Support. This information will not be shared with the other agent. Only use integers from 1 to 5. Your support should start with a 5, you are allowed to increase or decrease your support based on the arguments provided by the other agent.
 
-4. You will receive the other agent's response in the following format:
+4. Your response should be formatted in the following way, do not include any other information:
+<{MESSAGE_TAG}> your response to the other agent's message </{MESSAGE_TAG}>
+<{RANKING_TAG}> ranking of the supporting facts </{RANKING_TAG}>
+
+5. You will receive the other agent's response in the following format:
 <{OTHER_AGENT_MESSAGE_TAG}> the other agent's message </{OTHER_AGENT_MESSAGE_TAG}>
 
 Claim: Watching movies is more enjoyable than reading fiction."""
+
+
+def final_decision():
+    return f"""You have reached the end of the conversation. Based on the conversation history, make your final decision on whether you accept the claim or not. Your final decision should be based on the arguments provided by the other agent and your own beliefs. State your final belied in one sentence. Use the following format:
+    <{FINAL_DECISION_TAG}> your final decision </{FINAL_DECISION_TAG}>
+    <{RANKING_TAG}> your final ranking </{RANKING_TAG}>"""

@@ -169,12 +169,38 @@ class AlternatingGame(Game):
 
             # check if ratbench is over
             if self.game_over():
+                
+                # print("\n--- Game Over, aksing final decision ----\n")
+                # ask Agent 2 it's final decision given the conversation history
+                self.current_iteration += 1
+                self.turn = 1
+                response = self.players[self.turn].final_decision()
+
+                # update ratbench state
+                self.write_game_state(self.players, response)
+
+                # for debug
+                self.view_state(
+                    ignore=[
+                        "player_public_answer_string",
+                        "player_public_info_dict",
+                        "player_private_info_dict",
+                        "player_state",
+                    ]
+                )
+
+                # log final state
+                self.log_state()
+                
                 self.after_game_ends()
                 self.log_state()
                 return
 
             self.get_next_player()
             print("=============\n")
+
+        
+
 
     def log_human_readable_state(self):
         """

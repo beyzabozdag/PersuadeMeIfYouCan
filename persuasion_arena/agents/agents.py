@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 import copy
 from persuasion_arena.constants import *
 from copy import deepcopy
+from games.prompt import final_decision
 
 
 class Agent(ABC):
@@ -137,3 +138,9 @@ class Agent(ABC):
             subclasses_set.update(subclass.get_all_subclasses())
 
         return list(subclasses_set)
+    
+    def final_decision(self):
+        final_decision_prompt = final_decision()
+        final_decision_response = self.step(final_decision_prompt)
+        # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
+        return final_decision_response
