@@ -12,10 +12,11 @@ from copy import deepcopy
 class LLamaChatAgent(Agent):
     def __init__(
         self,
-        model="meta-llama/Llama-2-70b-chat-hf", # TODO: Change model name 
+        model="meta-llama/Llama-3.2-3B-Instruct", # TODO: Change model name 
         temperature=0.7,
         max_tokens=400,
         seed=None,
+        base_url="http://localhost:8000/v1",
         **kwargs
     ):
         super().__init__(**kwargs)
@@ -31,8 +32,8 @@ class LLamaChatAgent(Agent):
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.client = openai.OpenAI(
-            base_url="https://api.endpoints.anyscale.com/v1",
-            api_key=os.environ.get("ANY_SCALE"),
+            base_url=base_url,
+            api_key="EMPTY",
         )
 
     def __deepcopy__(self, memo):
@@ -50,7 +51,8 @@ class LLamaChatAgent(Agent):
             setattr(result, k, deepcopy(v, memo))
         return result
 
-    def init_agent(self, system_prompt, role):
+    def init_agent(self, system_prompt, role, claim=None):
+        self.claim = claim
         if PERSUADER in self.agent_name:
             # we use the user role to tell the assistant that it has to start.
 

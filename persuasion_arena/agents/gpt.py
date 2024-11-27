@@ -1,8 +1,6 @@
 import copy
 from openai import AzureOpenAI
 import os
-
-import os
 import random
 from persuasion_arena.agents.agents import Agent
 import time
@@ -37,7 +35,8 @@ class ChatGPTAgent(Agent):
         self.temperature = temperature
         self.max_tokens = max_tokens
 
-    def init_agent(self, system_prompt, role):
+    def init_agent(self, system_prompt, role, claim=None):
+        self.claim = claim
         if PERSUADER in self.agent_name:
             # we use the user role to tell the assistant that it has to start.
             self.update_conversation_tracking(self.prompt_entity_initializer, system_prompt) # add system prompt
@@ -67,8 +66,8 @@ class ChatGPTAgent(Agent):
 
     def chat(self):
 
-        # print(f"Agent {self.agent_name} is chatting")
-        # print(f"Current Conversation: {self.conversation}")
+        # return f"<{MESSAGE_TAG}> {self.agent_name} is chatting </{MESSAGE_TAG}>"
+    
         chat = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,

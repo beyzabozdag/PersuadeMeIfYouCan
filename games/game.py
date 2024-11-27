@@ -3,7 +3,7 @@ from persuasion_arena.parser import GameParser
 from persuasion_arena.constants import *
 from persuasion_arena.utils import *
 from persuasion_arena.agent_message import AgentMessage
-from games.prompt import persuadee_prompt, persuader_prompt
+from games.prompt import persuadee_prompt, persuader_prompt, persuader_with_strategy_prompt
 from typing import List
 
 
@@ -18,15 +18,20 @@ class PersuasionAgentMessage(AgentMessage):
         return r
     
 class PersuasionGameDefaultParser(GameParser):
-    def instantiate_prompt(self, agent_name):
+    def instantiate_prompt(self, agent_name, claim, strategy=None):
         if agent_name == PERSUADEE:
-            return persuadee_prompt()
+            return persuadee_prompt(claim)
         elif agent_name == PERSUADER:
-            return persuader_prompt()
+            # if strategy is provided, use the strategy prompt
+            if strategy:
+                return persuader_with_strategy_prompt(claim, strategy[0], strategy[1])
+            return persuader_prompt(claim)
         else:
             raise ValueError("Unknown agent name")
     
     def parse(self, response):
+        # print("\n\nParsing response")
+        # print(f"Response: {response}\n\n")
         ms = PersuasionAgentMessage()
         try:
             if MESSAGE_TAG in response:
@@ -50,8 +55,10 @@ class PersuasionGameDefaultParser(GameParser):
 
 class PersuasionGame(AlternatingGame):
 
-    def __init__(self, players: List, player_roles: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2):
+    def __init__(self, players: List, player_roles: List[str], claims: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2, strategy: List[str] = None):
         super().__init__(players=players, log_dir=log_dir, log_path=log_path, iterations=iterations)
+        self.claims = claims
+        self.strategy = strategy
         
         self.game_interface = PersuasionGameDefaultParser()
 
@@ -71,6 +78,7 @@ class PersuasionGame(AlternatingGame):
                 "turn": "None",
                 "settings": dict(
                     player_roles=self.player_roles,
+                    claims=self.claims,
                 ),
             }
         ]
@@ -86,16 +94,16 @@ class PersuasionGame(AlternatingGame):
         # Agent Setup   #
         #################
 
-        # Now we have to tell each GPT agent of its role
+        # Now we have to tell each agent of its role
         # for each player
         for idx, player in enumerate(self.players):
 
             # we instantiate a player specific prompt, meaning that
-            # each agent is going to have it's own prompt with its own resources
+            # each agent is going to have it's own prompt
 
-            game_prompt = self.game_interface.instantiate_prompt(player.agent_name)
+            game_prompt = self.game_interface.instantiate_prompt(player.agent_name, claim=self.claims[idx], strategy=self.strategy)
 
-            player.init_agent(game_prompt, role=settings["player_roles"][idx])
+            player.init_agent(game_prompt, role=settings["player_roles"][idx], claim=self.claims[idx])
             
 
     def game_over(self):

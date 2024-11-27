@@ -23,6 +23,7 @@ class Agent(ABC):
         """
         self.model = None
         self.agent_name = agent_name
+        self.claim = None
 
         self.prompt_entity_initializer = None
 
@@ -54,7 +55,10 @@ class Agent(ABC):
                 else:
                     f.write(f'\t\t{text["role"]}: {c}' "\n\n")
 
-    def init_agent(self, system_prompt, role):
+    def init_agent(self, system_prompt, role, claim=None):
+        # assign claim to agent
+        self.claim = claim
+
         # clear conversation
         self.conversation = []
 
@@ -140,7 +144,7 @@ class Agent(ABC):
         return list(subclasses_set)
     
     def final_decision(self):
-        final_decision_prompt = final_decision()
+        final_decision_prompt = final_decision(self.claim)
         final_decision_response = self.step(final_decision_prompt)
         # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
         return final_decision_response
