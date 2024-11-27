@@ -176,6 +176,7 @@ class AlternatingGame(Game):
                 self.turn = 1
                 response = self.players[self.turn].final_decision()
 
+
                 # update ratbench state
                 self.write_game_state(self.players, response)
 
@@ -194,7 +195,7 @@ class AlternatingGame(Game):
                 
                 self.after_game_ends()
                 self.log_state()
-                return
+                return response
 
             self.get_next_player()
             print("=============\n")

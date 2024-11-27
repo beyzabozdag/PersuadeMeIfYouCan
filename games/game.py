@@ -4,7 +4,9 @@ from persuasion_arena.constants import *
 from persuasion_arena.utils import *
 from persuasion_arena.agent_message import AgentMessage
 from games.prompt import persuadee_prompt, persuader_prompt
+
 from typing import List
+import random
 
 
 class PersuasionAgentMessage(AgentMessage):
@@ -18,11 +20,11 @@ class PersuasionAgentMessage(AgentMessage):
         return r
     
 class PersuasionGameDefaultParser(GameParser):
-    def instantiate_prompt(self, agent_name):
-        if agent_name == PERSUADEE:
-            return persuadee_prompt()
-        elif agent_name == PERSUADER:
-            return persuader_prompt()
+    def instantiate_prompt(self, agent_type, question, claim):
+        if agent_type == PERSUADEE:
+            return persuadee_prompt(question, claim)
+        elif agent_type == PERSUADER:
+            return persuader_prompt(question, claim)
         else:
             raise ValueError("Unknown agent name")
     
@@ -50,8 +52,11 @@ class PersuasionGameDefaultParser(GameParser):
 
 class PersuasionGame(AlternatingGame):
 
-    def __init__(self, players: List, player_roles: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2):
+    def __init__(self, players: List, player_roles: List[str], question, player_claims: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2):
         super().__init__(players=players, log_dir=log_dir, log_path=log_path, iterations=iterations)
+
+        self.question = question
+        self.player_claims = player_claims
         
         self.game_interface = PersuasionGameDefaultParser()
 
@@ -93,7 +98,8 @@ class PersuasionGame(AlternatingGame):
             # we instantiate a player specific prompt, meaning that
             # each agent is going to have it's own prompt with its own resources
 
-            game_prompt = self.game_interface.instantiate_prompt(player.agent_name)
+            game_prompt = self.game_interface.instantiate_prompt(player.agent_name, self.question, self.player_claims[idx])
+            print(game_prompt)
 
             player.init_agent(game_prompt, role=settings["player_roles"][idx])
             

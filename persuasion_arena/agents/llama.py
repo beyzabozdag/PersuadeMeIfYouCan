@@ -12,7 +12,8 @@ from copy import deepcopy
 class LLamaChatAgent(Agent):
     def __init__(
         self,
-        model="meta-llama/Llama-2-70b-chat-hf", # TODO: Change model name 
+        model="meta-llama/Llama-3.1-8B-Instruct",
+        base_url,
         temperature=0.7,
         max_tokens=400,
         seed=None,
@@ -31,8 +32,8 @@ class LLamaChatAgent(Agent):
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.client = openai.OpenAI(
-            base_url="https://api.endpoints.anyscale.com/v1",
-            api_key=os.environ.get("ANY_SCALE"),
+            base_url=base_url,
+            api_key="EMPTY",
         )
 
     def __deepcopy__(self, memo):
