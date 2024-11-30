@@ -6,10 +6,15 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import sys
 from dotenv import load_dotenv
 import inspect
+import random
+from tenacity import retry, stop_after_attempt, wait_fixed
+
 from persuasion_arena.agents import *
 from games.game import PersuasionGame
 from games.strategies import persuasive_strategies
 from persuasion_arena.constants import *
+from datasets import load_dataset
+
 
 import random
 from datasets import load_dataset
@@ -61,6 +66,7 @@ def get_agents():
     a1 = LLamaChatAgent(
         model=model1,
         agent_name=PERSUADER,
+        base_url="http://localhost:8000/v1"
     )
 
     a2 = LLamaChatAgent(

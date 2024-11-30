@@ -70,7 +70,7 @@ class LLamaChatAgent(Agent):
 
     def chat(self):
         # return f"<message>Dummy chat for {self.agent_name}</message>"
-        
+
         chat_completion = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,

@@ -5,6 +5,7 @@ from persuasion_arena.utils import *
 from persuasion_arena.agent_message import AgentMessage
 from games.prompt import persuadee_prompt, persuader_prompt, persuader_with_strategy_prompt
 from typing import List
+import random
 
 
 class PersuasionAgentMessage(AgentMessage):
