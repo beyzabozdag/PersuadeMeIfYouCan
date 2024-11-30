@@ -30,7 +30,7 @@ class AgentMessage:
     def message_to_other_player(self):
         response = []
         for key, value in self.public.items():
-            response.append(from_name_and_tag_to_message(key, value)) # creates a XML-like message from the key, value pair
+            response.append(from_name_and_tag_to_message(key, value)) # creates a XML-like message from the key,    value pair
 
         r = "\n".join(response)
 

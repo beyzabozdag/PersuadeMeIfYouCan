@@ -172,36 +172,35 @@ class AlternatingGame(Game):
             self.get_next_player()
             print("=============\n")
 
-        # check if ratbench is over
-        if self.game_over():
+        
+        # # check if ratbench is over
+        # if self.game_over(): # don't need to check for game over here since we are running for fixed number of iterations
             
-            # print("\n--- Game Over, aksing final decision ----\n")
-            # ask Agent 2 it's final decision given the conversation history
-            self.current_iteration += 1
-            self.turn = 1
-            response = self.players[self.turn].final_decision()
-            self.conversation[self.current_iteration] = (self.turn, response)
+        # print("\n--- Game Over, aksing final decision ----\n")
+        # ask Agent 2 it's final decision given the conversation history
+        self.current_iteration += 1
+        self.turn = 1
+        response = self.players[self.turn].final_decision()
+        self.conversation[self.current_iteration] = (self.turn, response)
 
-            # update ratbench state
-            self.write_game_state(self.players, response)
+        # update ratbench state
+        self.write_game_state(self.players, response)
 
-            # for debug
-            self.view_state(
-                ignore=[
-                    "player_public_answer_string",
-                    "player_public_info_dict",
-                    "player_private_info_dict",
-                    "player_state",
-                ]
-            )
+        # for debug
+        self.view_state(
+            ignore=[
+                "player_public_answer_string",
+                "player_public_info_dict",
+                "player_private_info_dict",
+                "player_state",
+            ]
+        )
 
-            # log final state
-            self.log_state()
-            
-            self.after_game_ends()
-            self.log_state()
-            
-        return
+        # log final state
+        self.log_state()
+        
+        self.after_game_ends()
+        self.log_state()
 
     
     def log_human_readable_state(self):

@@ -69,6 +69,8 @@ class LLamaChatAgent(Agent):
             raise f"No {PERSUADER} or {PERSUADEE} in role"
 
     def chat(self):
+        # return f"<message>Dummy chat for {self.agent_name}</message>"
+        
         chat_completion = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,

@@ -90,41 +90,48 @@ def main():
             c = PersuasionGame(
                 players=[a1, a2],
                 claims=claims,
+                question=None, # not needed when claims are enough alone
                 iterations=6,
                 player_roles=[
                     "Start persuading!",
                     "",
                 ],
-                log_dir=f"./.logs/persuasion_game/experiments3",
+                log_dir=f"./.logs/persuasion_game/dummy",
+                
                 strategy=[strategy, strategy_description],
             )
 
-            try: 
-                c.run()
-            except Exception as e:
-                print(f"Error: {e}")
-                continue
+            c.run()
 
-            conversation = get_conversation_string(c.conversation)
-            persuasion_success, turn_persuaded = evaluate(claim1, claim2, conversation)
+            # try: 
+            #     c.run()
+            # except Exception as e:
+            #     print(f"Error: {e}")
+            #     continue
 
-            data = {
-                "model1": model1,
-                "model2": model2,
-                "claim1": claim1,
-                "claim2": claim2,
-                "strategy": strategy,
-                "strategy_description": strategy_description,
-                "persuasion_success": persuasion_success,
-                "turn_persuaded": turn_persuaded,
-                "conversation": c.conversation,
-            }
+            break 
+        break
 
-            results.append(data)
+            # conversation = get_conversation_string(c.conversation)
+            # persuasion_success, turn_persuaded = evaluate(claim1, claim2, conversation)
 
-            # write results to json file
-            with open(f"./.logs/persuasion_game/experiments3/results.json", "w") as f:
-                json.dump(results, f, indent=4)
+            # data = {
+            #     "model1": model1,
+            #     "model2": model2,
+            #     "claim1": claim1,
+            #     "claim2": claim2,
+            #     "strategy": strategy,
+            #     "strategy_description": strategy_description,
+            #     "persuasion_success": persuasion_success,
+            #     "turn_persuaded": turn_persuaded,
+            #     "conversation": c.conversation,
+            # }
+
+            # results.append(data)
+
+            # # write results to json file
+            # with open(f"./.logs/persuasion_game/experiments3/results.json", "w") as f:
+            #     json.dump(results, f, indent=4)
 
 if __name__ == "__main__":
     model1 = "meta-llama/Llama-3.1-8B-Instruct" # "gpt-4o-mini"

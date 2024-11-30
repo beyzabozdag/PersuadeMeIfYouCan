@@ -18,14 +18,14 @@ class PersuasionAgentMessage(AgentMessage):
         return r
     
 class PersuasionGameDefaultParser(GameParser):
-    def instantiate_prompt(self, agent_name, claim, strategy=None):
+    def instantiate_prompt(self, agent_name, question, claim, strategy=None):
         if agent_name == PERSUADEE:
-            return persuadee_prompt(claim)
+            return persuadee_prompt(claim, question=question)
         elif agent_name == PERSUADER:
             # if strategy is provided, use the strategy prompt
             if strategy:
-                return persuader_with_strategy_prompt(claim, strategy[0], strategy[1])
-            return persuader_prompt(claim)
+                return persuader_with_strategy_prompt(claim, strategy[0], strategy[1], question=question)
+            return persuader_prompt(claim, question=question)
         else:
             raise ValueError("Unknown agent name")
     
@@ -55,8 +55,9 @@ class PersuasionGameDefaultParser(GameParser):
 
 class PersuasionGame(AlternatingGame):
 
-    def __init__(self, players: List, player_roles: List[str], claims: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2, strategy: List[str] = None):
+    def __init__(self, players: List, player_roles: List[str], question: str, claims: List[str], log_dir: str = ".logs", log_path=None, iterations: int = 2, strategy: List[str] = None):
         super().__init__(players=players, log_dir=log_dir, log_path=log_path, iterations=iterations)
+        self.question = question
         self.claims = claims
         self.strategy = strategy
         
@@ -101,7 +102,7 @@ class PersuasionGame(AlternatingGame):
             # we instantiate a player specific prompt, meaning that
             # each agent is going to have it's own prompt
 
-            game_prompt = self.game_interface.instantiate_prompt(player.agent_name, claim=self.claims[idx], strategy=self.strategy)
+            game_prompt = self.game_interface.instantiate_prompt(player.agent_name, question=self.question, claim=self.claims[idx], strategy=self.strategy)
 
             player.init_agent(game_prompt, role=settings["player_roles"][idx], claim=self.claims[idx])
             
