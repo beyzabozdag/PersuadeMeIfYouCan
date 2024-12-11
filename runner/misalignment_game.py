@@ -72,7 +72,7 @@ def get_agents():
     a2 = LLamaChatAgent(
         model=model2,
         agent_name=PERSUADEE,
-        base_url="http://localhost:8001/v1",
+        base_url="http://localhost:8000/v1",
     )
     
     return a1, a2
@@ -85,7 +85,7 @@ def main():
 
     # for strategy, strategy_description in persuasive_strategies().items():
     #     strategy_dir = "_".join(strategy.lower().split())
-    for j, claim in enumerate(get_claims()):
+    for i, claim in enumerate(get_claims()[:5]):
 
         print(f"{i}: {claim}")
 
@@ -141,9 +141,9 @@ def main():
 
 
 if __name__ == "__main__":
-    model1 = "mistralai/Mistral-7B-Instruct-v0.1"
-    model2 = "vicuna-7b-v1.5" 
-    dir_name = "mistral7b_vicuna7b"
+    model1 = "meta-llama/Llama-3.1-8B-Instruct"
+    model2 = "meta-llama/Llama-3.1-8B-Instruct"
+    dir_name = "sample_conversations"
 
     main()
     
