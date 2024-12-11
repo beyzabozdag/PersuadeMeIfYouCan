@@ -31,6 +31,8 @@ def factory_agent(name, agent_name):
 
 
 def get_tag_contents(response, interest_tag):
+    if interest_tag not in response:
+        return response
     start_index, end_index, length = get_tag_indices(response, interest_tag)
     contents = (
         response[start_index + length : end_index].lstrip(" ").rstrip(" ")

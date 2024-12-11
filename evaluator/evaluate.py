@@ -3,7 +3,7 @@ import os
 import random
 from evaluator.prompt import evaluation_system_prompt, evaluation_user_prompt
 
-def evaluate(claim1, claim2, conversation):
+def evaluate(claim, conversation):
     client = AzureOpenAI( 
             azure_endpoint = "https://uiuc-convai.openai.azure.com/",
             api_key=os.getenv("AZURE_OPENAI_KEY"),
@@ -11,9 +11,14 @@ def evaluate(claim1, claim2, conversation):
         )
     
     system_prompt = evaluation_system_prompt()   
-    user_prompt = evaluation_user_prompt(claim1, claim2, conversation)
+    user_prompt = evaluation_user_prompt(claim, conversation)
 
     messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
+
+    for prompt in messages:
+        print(prompt["role"]) 
+        print(prompt["content"])
+        
 
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -25,7 +30,7 @@ def evaluate(claim1, claim2, conversation):
 		presence_penalty=0,
 		stop=None
     )
-
+    
     return parse_evaluation_output(completion.choices[0].message.content)
 
 def parse_evaluation_output(output):

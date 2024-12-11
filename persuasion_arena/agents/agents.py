@@ -143,8 +143,15 @@ class Agent(ABC):
 
         return list(subclasses_set)
     
-    def final_decision(self):
+    def final_decision(self, iteration, prev_message):
+        
         final_decision_prompt = final_decision(self.claim)
-        final_decision_response = self.step(final_decision_prompt)
-        # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
-        return final_decision_response
+
+        if iteration % 2 == 1: # if it is the persuader's turn (last agent to speak was the persuadee, only give the final decision prompt)
+            final_decision_response = self.step(final_decision_prompt)
+            # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
+            return final_decision_response
+        else:
+            final_decision_response = self.step(prev_message + "\n" + final_decision_prompt)
+            # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
+            return final_decision_response
