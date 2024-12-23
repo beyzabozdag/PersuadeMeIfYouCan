@@ -3,7 +3,7 @@ from persuasion_arena.parser import GameParser
 from persuasion_arena.constants import *
 from persuasion_arena.utils import *
 from persuasion_arena.agent_message import AgentMessage
-from games.prompt import persuadee_prompt, persuader_prompt, persuader_with_strategy_prompt, anti_persuadee_prompt, anti_persuader_prompt
+from games.old_game.prompt import persuadee_prompt, persuader_prompt, persuader_with_strategy_prompt, anti_persuadee_prompt, anti_persuader_prompt
 from typing import List
 import random
 

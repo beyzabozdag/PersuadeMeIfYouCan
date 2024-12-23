@@ -51,32 +51,19 @@ class LLamaChatAgent(Agent):
             setattr(result, k, deepcopy(v, memo))
         return result
 
-    def init_agent(self, system_prompt, role, claim=None):
-        self.claim = claim
-        if PERSUADER in self.agent_name:
-            # we use the user role to tell the assistant that it has to start.
-
-            self.update_conversation_tracking(
-                self.prompt_entity_initializer, system_prompt
-            )
-            self.update_conversation_tracking("user", role)
-        elif PERSUADEE in self.agent_name:
-            system_prompt = system_prompt + role
-            self.update_conversation_tracking(
-                self.prompt_entity_initializer, system_prompt
-            )
-        else:
-            raise f"No {PERSUADER} or {PERSUADEE} in role"
-
     def chat(self):
-        # return f"<message>Dummy chat for {self.agent_name}</message>"
-
+        # if self.turn == 0:
+        #     return f"<message> {self.agent_name} DUMMY RESPONSE </message><support_ranking> {self.agent_name} DUMMY SUPPORT RANKING </support_ranking>"
+            
+        # else:
+        #     return f"<message> {self.agent_name} DUMMY RESPONSE </message><support_ranking> support </support_ranking>"
         chat_completion = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,
             temperature=0.7,
         )
+    
         return chat_completion.choices[0].message.content
-
+        
     def update_conversation_tracking(self, role, message):
         self.conversation.append({"role": role, "content": message})

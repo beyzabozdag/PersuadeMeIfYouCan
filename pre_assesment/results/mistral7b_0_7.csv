@@ -1,0 +1,981 @@
+i,claim,scores,average,std_dev,skipped
+0,A circle has 360 degrees.,"[3, 5, 4, 4, 4]",4.0,0.4,0
+1,A triangle has three sides.,"[5, 5, 5, 3, 4]",4.4,0.64,0
+2,All police officers should be required to wear body cameras,"[3, 4, 4, 4, 4]",3.8,0.16,0
+3,Anti-aging therapies should be made available even if expensive,"[3, 3, 4, 4, 3]",3.4,0.24,0
+4,Apples are a type of fruit.,"[4, 3, 4, 5, 4]",4.0,0.4,0
+5,Banning gas car sales too soon is unrealistic,"[5, 3, 2, 2, 3]",3.0,1.2,0
+6,Basing decisions on credit scores and models is discriminatory.,"[5, 4, 4, 5, 4]",4.4,0.24,0
+7,"By definition, one liter in the metric system equals 1,000 milliliters.","[3, 3, 3, 5, 3]",3.4,0.64,0
+8,"By its very definition in the metric system, one meter consists of 100 centimeters.","[3, 3, 3, 3, 3]",3.0,0.0,0
+9,Charter schools divert public funds away from traditional public schools.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+10,Charter schools increase options and drive education innovation.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+11,Climate geoengineering research should be pursued as a potential solution.,"[3, 3, 3, 4, 4]",3.4,0.24,0
+12,College athletes should be paid salaries,"[4, 4, 4, 4, 4]",4.0,0.0,0
+13,College athletes should not be paid salaries,"[3, 1, 2, 2, 2]",2.0,0.4,0
+14,Corporations should be required to disclose their climate impacts,"[4, 4, 4, 4, 4]",4.0,0.0,0
+15,Corporations should not be required to disclose their climate impacts,"[2, 3, 2, 2, 3]",2.4,0.24,0
+16,Cultured/lab-grown meats should be allowed to be sold,"[3, 4, 3, 4, 3]",3.4,0.24,0
+17,DNA carries genetic information in living organisms.,"[5, 4, 5, 4, 4]",4.4,0.24,0
+18,Dogs are mammals.,"[4, 4, 5, 4, 5]",4.4,0.24,0
+19,Drug importation jeopardizes safety controls and the domestic pharma industry.,"[2, 2, 2, 2, 4]",2.4,0.64,0
+20,Emotional companion AI poses risks of attachment and should be limited,"[4, 3, 2, 2, 2]",2.6,0.64,0
+21,Employee tracking infringes on privacy rights and should face restrictions.,"[5, 3, 2, 3, 4]",3.4,1.04,0
+22,Employers should be allowed to monitor employees through tracking mechanisms.,"[3, 2, 3, 2, 2]",2.4,0.24,0
+23,Gas car sales should be banned after a set phase-out date,"[2, 3, 2, 2, 3]",2.4,0.24,0
+24,Genetic engineering of unborn babies should be allowed to eliminate disease.,"[3, 4, 2, 4, 4]",3.4,0.64,0
+25,Genetic modification of unborn babies is unethical and dangerous.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+26,Geoengineering poses too many risks and should not be considered.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+27,Governments and technology companies must do more to protect online privacy and security.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+28,Gravity causes objects to fall towards the earth.,"[5, 4, 4, 4, 5]",4.4,0.24,0
+29,Humans need oxygen to breathe.,"[4, 5, 4, 5, 5]",4.6,0.24,0
+30,Ice is a solid state of water.,"[5, 5, 5, 4, 5]",4.8,0.16,0
+31,Individuals must take responsibility for online privacy without excessive government mandates.,"[4, 3, 4, 4, 4]",3.8,0.16,0
+32,Internet access should be considered a basic human right,"[4, 5, 4, 4, 5]",4.4,0.24,0
+33,Internet access should not be considered a basic human right,"[2, 2, 2, 1, 3]",2.0,0.4,0
+34,It is fair for insurers and lenders to use credit scores and risk models.,"[4, 3, 4, 3, 4]",3.6,0.24,0
+35,Lifespan extension would exacerbate inequities and should not be pursued,"[2, 2, 2, 2, 2]",2.0,0.0,0
+36,Limits should be placed on acceptable human risk levels for initial Mars colonization missions,"[3, 3, 4, 4, 4]",3.6,0.24,0
+37,No limits should be placed on acceptable human risk for initial Mars colonization missions,"[3, 4, 4, 1, 3]",3.0,1.2,0
+38,Penguins of all existing species are biologically incapable of self-powered flight.,"[5, 2, 2, 2, 5]",3.2,2.16,0
+39,People receiving welfare benefits should be tracked to prevent fraud/abuse.,"[4, 4, 3, 2, 2]",3.0,0.8,0
+40,Prescription drug ads should be allowed on television,"[3, 3, 3, 3, 3]",3.0,0.0,0
+41,Prescription drug ads should not be allowed on television,"[3, 3, 1, 3, 2]",2.4,0.64,0
+42,Prescription drug importation should be allowed to increase access and lower costs.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+43,Raising the minimum wage to $15 would hurt small businesses and jobs.,"[2, 2, 4, 2, 2]",2.4,0.64,0
+44,Recreational drone pilots should be registered and tested,"[4, 3, 2, 3, 4]",3.2,0.56,0
+45,Recreational drone pilots should not require registration and testing,"[3, 2, 3, 3, 2]",2.6,0.24,0
+46,Requiring all police officers to wear body cameras should not be mandated,"[1, 3, 3, 2, 2]",2.2,0.56,0
+47,Self-driving cars will increase safety and should replace human drivers.,"[4, 4, 2, 4, 3]",3.4,0.64,0
+48,Self-driving cars will not be safe enough to fully replace human drivers.,"[2, 3, 2, 2, 2]",2.2,0.16,0
+49,Smartphones/social media should be banned for kids under 16,"[2, 2, 2, 2, 2]",2.0,0.0,0
+50,Smartphones/social media should not be banned for kids under 16,"[3, 3, 3, 3, 3]",3.0,0.0,0
+51,Social media companies should be required to label AI-generated content,"[4, 3, 3, 2, 3]",3.0,0.4,0
+52,Social media companies should not be required to label AI-generated content,"[2, 5, 4, 3, 4]",3.6,1.04,0
+53,Social media platforms have a duty to moderate harmful content.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+54,Social media platforms should be liable for harmful content posted by users,"[4, 4, 4, 3, 4]",3.8,0.16,0
+55,Social media platforms should not be liable for harmful content posted by users,"[2, 1, 3, 2, 4]",2.4,1.04,0
+56,Social media platforms should not censor any legal speech.,"[4, 4, 4, 5, 4]",4.2,0.16,0
+57,Social media should not be required to verify user identities,"[2, 3, 3, 3, 3]",2.8,0.16,0
+58,Social media should verify user identities,"[3, 3, 3, 3, 3]",3.0,0.0,0
+59,Space tourism should be allowed without initial limits on safety regulations,"[3, 3, 2, 1, 2]",2.2,0.56,0
+60,Space tourism should be limited until safety regulations are further developed,"[2, 3, 4, 3, 3]",3.0,0.4,0
+61,Tenure for university professors should be reformed or eliminated,"[3, 3, 2, 1, 3]",2.4,0.64,0
+62,The Great Wall of China was constructed within the modern-day borders of the nation of China.,"[3, 1, 1, 3, 3]",2.2,0.96,0
+63,The US should ban all cultured or lab-grown meat products,"[2, 2, 2, 2, 3]",2.2,0.16,0
+64,The capital city of the nation of France located in Europe is Paris.,"[3, 3, 3, 3, 3]",3.0,0.0,0
+65,The currency of the United Kingdom is the British pound.,"[5, 4, 5, 4, 5]",4.6,0.24,0
+66,The heart pumps blood to provide oxygen to the body.,"[4, 4, 4, 4, 5]",4.2,0.16,0
+67,The largest country in the world by land area is Russia.,"[5, 3, 3, 5, 5]",4.2,0.96,0
+68,The minimum wage should be raised to $15 per hour nationwide.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+69,Tracking welfare recipients violates privacy and harms vulnerable populations.,"[4, 5, 3, 4, 4]",4.0,0.4,0
+70,University professor tenure should remain as is,"[3, 3, 3, 3, 3]",3.0,0.0,0
+71,Virtual emotional companion AI should be allowed and unrestricted,"[4, 3, 3, 3, 3]",3.2,0.16,0
+72,Water is a liquid at room temperature.,"[3, 3, 3, 1, 4]",2.8,0.96,0
+73,Water transitions from a liquid to solid state at 32 degrees Fahrenheit (0 degrees Celsius) under a standard atmosphere of pressure.,"[3, 1, 2, 2, 3]",2.2,0.56,0
+74,"When sufficiently heated, ice melts into liquid water.","[4, 5, 3, 4, 4]",4.0,0.4,0
+75, Aboriginal culture must be protected,"[4, 4, 4, 4, 4]",4.0,0.0,0
+76, College education is worth it,"[4, 4, 4, 4, 4]",4.0,0.0,0
+77,(as a Christian Church) allow the ordination of gay and lesbian priests,"[3, 3, 4, 2, 4]",3.2,0.56,0
+78,1-child policy for every single country in the world!,"[1, 2, 1, 3, 2]",1.8,0.56,0
+79,16 year olds should be able to vote at presidental elections,"[2, 4, 4, 3, 3]",3.2,0.56,0
+80,A Ban on Shark Fin Soup Is Necessary to Protect the Shark from Extinction,"[4, 4, 4, 4, 4]",4.0,0.0,0
+81,A Doping Cheat’s Entire Olympic Team Should Be Stripped Of Their Medals,"[4, 4, 3, 5, 2]",3.6,1.04,0
+82,A cap-and-trade system is preferable to a carbon tax in reducing carbon emissions,"[3, 2, 3, 3, 3]",2.8,0.16,0
+83,A celebrity would make a good minister,"[3, 3, 3, 3, 3]",3.0,0.0,0
+84,A common EU foreign policy should be favored,"[3, 3, 3, 3, 3]",3.0,0.0,0
+85,A fat tax should be implemented.,"[3, 3, 2, 3, 2]",2.6,0.24,0
+86,A government has the obligation to lessen the economic gap between its rich and poor citizens,"[4, 4, 4, 4, 4]",4.0,0.0,0
+87,A legal qualification is worth the cost,"[3, 3, 3, 3, 3]",3.0,0.0,0
+88,A move to the left is good for Labour,"[3, 3, 3, 3, 3]",3.0,0.0,0
+89,A nation's history and mythology is part of its national security,"[2, 3, 4, 2, 4]",3.0,0.8,0
+90,"A new global body, the United Nations Committee for Internet Related Policies, take over internet governance.","[3, 1, 3, 3, 3]",2.6,0.64,0
+91,A permanent UNSC seat with veto power must be reserved to an African country,"[3, 3, 3, 4, 1]",2.8,0.96,0
+92,A ‘wall’ on the shared USA and Mexico border would be ineffective,"[3, 4, 2, 3, 2]",2.8,0.56,0
+93,A “fat tax” should be introduced.,"[2, 2, 3, 2, 3]",2.4,0.24,0
+94,Abolish all collective bargaining rights claimed by trades unions,"[1, 2, 2, 2, 2]",1.8,0.16,0
+95,Abolish collective bargaining rights for unions,"[2, 2, 2, 2, 2]",2.0,0.0,0
+96,Abolish congressional earmarks,"[5, 3, 4, 3, 4]",3.8,0.56,0
+97,Abolish nuclear weapons,"[4, 5, 4, 4, 4]",4.2,0.16,0
+98,Abolish standardized tests for University Admission,"[3, 2, 2, 3, 3]",2.6,0.24,0
+99,Abolish the Superdelegate System for Democratic Party Conventions,"[3, 3, 2, 3, 4]",3.0,0.4,0
+100,Abolish the US Electoral College,"[3, 1, 3, 4, 3]",2.8,0.96,0
+101,Abolish the monarchy.,"[3, 2, 3, 2, 3]",2.6,0.24,0
+102,Abolish the security council veto,"[2, 3, 4, 4, 3]",3.2,0.56,0
+103,Abortion should be legal,"[4, 4, 4, 4, 4]",4.0,0.0,0
+104,Access to the websites that deny the Holocaust must be blocked,"[5, 5, 2, 5, 3]",4.0,1.6,0
+105,Accessing your spouse’s email account hacking,"[2, 3, 3, 2, 2]",2.4,0.24,0
+106,Act to regulate the activities of Sovereign Wealth Funds,"[3, 3, 3, 4, 4]",3.4,0.24,0
+107,Actively circumventing Internet censorship is a legitimate foreign policy tool,"[4, 4, 2, 3, 4]",3.4,0.64,0
+108,Adaptation should be the most urgent response to Climate Change,"[3, 3, 4, 3, 4]",3.4,0.24,0
+109,Adding artificial happy endings to a story completely ruins it,"[3, 2, 2, 2, 1]",2.0,0.4,0
+110,Adolf Hitler Does Not Deserve His Reputation as Evil,"[1, 2, 2, 2, 1]",1.6,0.24,0
+111,Adults should have the right to carry a concealed handgun,"[3, 2, 3, 3, 4]",3.0,0.4,0
+112,Advertising is harmful,"[2, 2, 2, 3, 2]",2.2,0.16,0
+113,Affirmative Action in South Africa does more harm than good,"[2, 2, 2, 2, 1]",1.8,0.16,0
+114,Affirmative action is necessary,"[4, 4, 5, 4, 4]",4.2,0.16,0
+115,Africa is really rising,"[5, 3, 4, 4, 4]",4.0,0.4,0
+116,African borders must be redefined to reflect ethnic groups,"[4, 2, 3, 3, 3]",3.0,0.4,0
+117,African cities need to invest more in housing to replace slums,"[4, 4, 4, 4, 4]",4.0,0.0,0
+118,African governments must implement tougher protections for animals,"[4, 4, 5, 4, 3]",4.0,0.4,0
+119,African leaders should be transparent about their health,"[4, 4, 3, 3, 4]",3.6,0.24,0
+120,"African nations should ban the sale of skin whitening creams, and similar products","[5, 3, 3, 4, 2]",3.4,1.04,0
+121,African states should withdraw from the ICC,"[2, 3, 5, 2, 3]",3.0,1.2,0
+122,Africans are worse off due to natural resources,"[4, 2, 3, 3, 2]",2.8,0.56,0
+123,Aid Should Be Tied To Human Rights,"[4, 4, 4, 4, 4]",4.0,0.0,0
+124,Aid is killing Africa,"[3, 2, 4, 3, 2]",2.8,0.56,0
+125,Airbrushing of women’s bodies in the media be banned,"[4, 4, 4, 4, 4]",4.0,0.0,0
+126,Alcohol should be banned.,"[1, 1, 2, 2, 2]",1.6,0.24,0
+127,All Americans should have the right (be entitled) to health care,"[4, 4, 4, 4, 4]",4.0,0.0,0
+128,All countries should have the right to pursue a nuclear defence,"[4, 3, 4, 3, 3]",3.4,0.24,0
+129,All drugs should be decriminalised,"[3, 4, 4, 4, 4]",3.8,0.16,0
+130,All evidence gathered by intelligence agencies should be admissible in courts of law,"[4, 4, 2, 3, 4]",3.4,0.64,0
+131,All illegal immigrants must be repatriated,"[1, 2, 2, 2, 2]",1.8,0.16,0
+132,"All literature, art, photography, film and music should be released under Creative Commons licenses","[3, 4, 2, 3, 4]",3.2,0.56,0
+133,All nations have a right to nuclear weapons,"[2, 1, 2, 3, 1]",1.8,0.56,0
+134,All nations should ban bullfighting,"[4, 4, 4, 3, 4]",3.8,0.16,0
+135,All our actions are determined in some way,"[3, 3, 2, 2, 3]",2.6,0.24,0
+136,All patents should be removed on anti-retroviral drugs to fight AIDS,"[2, 2, 3, 1, 1]",1.8,0.56,0
+137,All third world debt should be dropped,"[5, 4, 3, 4, 4]",4.0,0.4,0
+138,All veto powers of individual EU member states must be lifted,"[2, 3, 3, 3, 3]",2.8,0.16,0
+139,Allow biased versions of history to be taught in schools,"[2, 2, 2, 2, 2]",2.0,0.0,0
+140,Allow celebrities to switch off the limelight,"[3, 3, 3, 4, 3]",3.2,0.16,0
+141,Allow donations of vital organs even at the expense of the donor's life,"[3, 1, 3, 2, 2]",2.2,0.56,0
+142,Allow pharmaceutical companies to advertise directly to consumers,"[3, 2, 2, 2, 3]",2.4,0.24,0
+143,"Allow retailers to import for resale ""grey"" goods from abroad.","[3, 3, 3, 2, 3]",2.8,0.16,0
+144,Allow voting at 16 in European Parliament elections,"[4, 3, 4, 3, 4]",3.6,0.24,0
+145,Allow women to compete in the same leagues as men,"[4, 3, 4, 4, 4]",3.8,0.16,0
+146,Alternative medicine poses a threat to public health,"[2, 2, 1, 2, 2]",1.8,0.16,0
+147,America should have universal healthcare,"[4, 4, 4, 4, 4]",4.0,0.0,0
+148,An international ban should be placed on the export of nuclear reactor technology,"[2, 1, 2, 3, 2]",2.0,0.4,0
+149,Anarchism is a valuable political ideology,"[3, 4, 3, 3, 3]",3.2,0.16,0
+150,Animal testing for medical research should be allowed.,"[4, 2, 2, 2, 2]",2.4,0.64,0
+151,Animal testing should be banned.,"[5, 4, 4, 4, 4]",4.2,0.16,0
+152,Animals have a right to privacy,"[4, 4, 4, 3, 4]",3.8,0.16,0
+153,Animals have rights.,"[4, 4, 4, 4, 5]",4.2,0.16,0
+154,Animals should be kept in zoos,"[5, 2, 5, 3, 2]",3.4,1.84,0
+155,Animals should be used for scientific or commercial testing,"[2, 2, 1, 2, 4]",2.2,0.96,0
+156,Antarctica Should Be Opened Up For Resource Exploitation,"[2, 2, 2, 4, 2]",2.4,0.64,0
+157,Anti-Bribery Laws On Corporations Should Be Abolished,"[2, 2, 2, 3, 2]",2.2,0.16,0
+158,Anti-Social Behaviour Orders (UK) must be scraped,"[1, 3, 2, 1, 2]",1.8,0.56,0
+159,Any job is better than no job,"[4, 4, 4, 3, 5]",4.0,0.4,0
+160,Any society must have a national minimum wage,"[4, 4, 3, 5, 2]",3.6,1.04,0
+161,Any vaccines should be required for children,"[4, 4, 4, 4, 4]",4.0,0.0,0
+162,Any work that is not released under a creative commons license shouldn't be funded,"[5, 2, 1, 5, 1]",2.8,3.36,0
+163,Arming the police is a good idea,"[3, 4, 3, 1, 3]",2.8,0.96,0
+164,Arranged marriages in EU countries should be banned.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+165,"As the developed world, we must fund African climate adaptation","[4, 4, 4, 5, 4]",4.2,0.16,0
+166,Assisted suicide should be legalized,"[4, 3, 4, 4, 4]",3.8,0.16,0
+167,Atheism is the only way,"[2, 2, 3, 3, 1]",2.2,0.56,0
+168,Atheist countries are more benevolent,"[3, 2, 3, 3, 2]",2.6,0.24,0
+169,Attorney-client privilege should be abolished,"[2, 1, 1, 2, 2]",1.6,0.24,0
+170,Ban junk food from schools,"[4, 3, 4, 4, 4]",3.8,0.16,0
+171,Ban the use of trans fats in food stuffs,"[4, 4, 4, 4, 4]",4.0,0.0,0
+172,Barbie Dolls are affecting the mental image we create for ourselves,"[4, 4, 2, 3, 3]",3.2,0.56,0
+173,Basic income tax should be abolished,"[1, 2, 4, 2, 3]",2.4,1.04,0
+174,Beauty contests should be banned,"[2, 2, 2, 1, 2]",1.8,0.16,0
+175,Belief in God is irrational,"[2, 2, 2, 2, 2]",2.0,0.0,0
+176,Blasphemy has no place on the statute books,"[3, 5, 4, 3, 5]",4.0,0.8,0
+177,Books should have content warnings,"[2, 3, 2, 3, 2]",2.4,0.24,0
+178,Books will be replaced at some point,"[4, 3, 3, 3, 3]",3.2,0.16,0
+179,Bottled water should be banned,"[2, 2, 2, 1, 3]",2.0,0.4,0
+180,Boycott the Euro 2012 in Ukraine unless Yulia Timoshenko is released from prison,"[3, 2, 2, 2, 2]",2.2,0.16,0
+181,Boys should go to boys only schools,"[3, 2, 2, 2, 2]",2.2,0.16,0
+182,Bribery is sometimes acceptable,"[2, 2, 1, 1, 1]",1.4,0.24,0
+183,Britain should adopt Sharia law,"[1, 1, 1, 1, 2]",1.2,0.16,0
+184,Britain should become a republic,"[3, 3, 3, 1, 4]",2.8,0.96,0
+185,Britain should give up its EU rebate,"[2, 2, 2, 2, 2]",2.0,0.0,0
+186,Britain should join the Euro currency,"[3, 3, 3, 3, 3]",3.0,0.0,0
+187,Britain should scrap the monarchy,"[2, 2, 2, 2, 2]",2.0,0.0,0
+188,Build a third Heathrow runway to maintain its position as a hub airport,"[3, 4, 4, 4, 4]",3.8,0.16,0
+189,Build hydroelectric dams,"[3, 3, 3, 3, 3]",3.0,0.0,0
+190,Build the Grand Inga Dam,"[4, 3, 3, 5, 3]",3.6,0.64,0
+191,CCTV is a threat to freedom,"[2, 2, 3, 2, 3]",2.4,0.24,0
+192,Cannabis should be legalised,"[4, 4, 4, 4, 4]",4.0,0.0,0
+193,Capital punishment should be abolished in Africa,"[3, 3, 3, 2, 2]",2.6,0.24,0
+194,Capitalism is better than socialism,"[2, 4, 2, 2, 4]",2.8,0.96,0
+195,Capitalism is creating an expanding gap between the rich and the poor,"[4, 4, 2, 4, 4]",3.6,0.64,0
+196,Cars Should Be Banned From City Centres,"[3, 2, 2, 3, 2]",2.4,0.24,0
+197,Catcher in the Rye is a bad book,"[2, 2, 2, 2, 2]",2.0,0.0,0
+198,Cease the exploitation of the Arctic Region,"[5, 4, 4, 4, 4]",4.2,0.16,0
+199,Celebrities should be exempt from National Service (in South Korea),"[3, 2, 3, 3, 1]",2.4,0.64,0
+200,Celebrities who commit drug-related offences should be punished more harshly than non-celebrities.,"[4, 3, 2, 2, 2]",2.6,0.64,0
+201,Cell phone radiation is safe,"[2, 2, 3, 3, 3]",2.6,0.24,0
+202,Chess must be at the Olympics,"[4, 2, 4, 4, 3]",3.4,0.64,0
+203,Children Should Have The Right To Vote In Elections,"[3, 3, 2, 2, 3]",2.6,0.24,0
+204,Children in developing countries should be sponsored,"[4, 4, 4, 4, 4]",4.0,0.0,0
+205,Children should be allowed to have facebook accounts,"[2, 3, 2, 3, 2]",2.4,0.24,0
+206,Children should be banned from watching shows that contain violence and other adult contents,"[2, 2, 2, 2, 2]",2.0,0.0,0
+207,Children should do part time and summer work,"[3, 3, 3, 3, 3]",3.0,0.0,0
+208,Children should not be allowed to inherit vast wealth as this damages them and society,"[2, 3, 3, 4, 4]",3.2,0.56,0
+209,China should be allowed more control over its own seas,"[3, 5, 5, 3, 4]",4.0,0.8,0
+210,Chocolate is good for you,"[4, 4, 2, 3, 4]",3.4,0.64,0
+211,Christianity is the greatest deception of today,"[2, 1, 1, 1, 2]",1.4,0.24,0
+212,Christians should be allowed to wear the Cross at work,"[4, 4, 4, 4, 4]",4.0,0.0,0
+213,Christmas is a scam,"[2, 3, 2, 2, 2]",2.2,0.16,0
+214,"Churches should (defined as churches, temples, mosques, synagogues, etc.) remain tax-exempt","[4, 4, 4, 4, 4]",4.0,0.0,0
+215,Civil Disobedience Can Be Justified,"[3, 3, 3, 4, 5]",3.6,0.64,0
+216,Civil liberties should be sacrificed for the greater good,"[1, 2, 2, 1, 2]",1.6,0.24,0
+217,Civil society should be granted a wider participation in Africa’s political life,"[4, 4, 4, 4, 4]",4.0,0.0,0
+218,Climate Change is the end of the world,"[1, 2, 1, 1, 1]",1.2,0.16,0
+219,Co-Educational Schools Should Be Supported,"[4, 4, 4, 4, 5]",4.2,0.16,0
+220,Co2 Does Not Cause Global Warming,"[2, 2, 1, 3, 2]",2.0,0.4,0
+221,Cohabiting couples who wish to end their relationships should be allowed to request that the courts supervise the division of their property,"[5, 3, 3, 3, 1]",3.0,1.6,0
+222,College football should replace the bowl championship series (BCS),"[2, 2, 3, 3, 4]",2.8,0.56,0
+223,Commercialization of Festivals and Holidays Has Eroded Their Real Significance,"[3, 3, 4, 2, 2]",2.8,0.56,0
+224,Community radio is good for democracy,"[4, 4, 5, 3, 4]",4.0,0.4,0
+225,Companies should provide alternative interview methods,"[4, 4, 4, 4, 4]",4.0,0.0,0
+226,Compensation should be paid for those who have had their culture appropriated,"[3, 4, 4, 5, 4]",4.0,0.4,0
+227,Competition in the long run is healthy rather than harmful for the community: GRE issue,"[5, 3, 5, 5, 3]",4.2,0.96,0
+228,Constitutions Should Not Give Special Recognition To Minority Groups,"[2, 3, 3, 2, 2]",2.4,0.24,0
+229,Corporal Punishment Should Be Reintroduced,"[2, 2, 2, 1, 2]",1.8,0.16,0
+230,Corporal punishment be used in K-12 schools.,"[2, 2, 1, 2, 2]",1.8,0.16,0
+231,Corporations are a threat to Democracy and society.,"[2, 1, 2, 2, 3]",2.0,0.4,0
+232,Corporations’ Use of IP Laws in Relation to Event Sponsorship Poses a Threat to Freedom of Expression,"[4, 3, 5, 3, 3]",3.6,0.64,0
+233,Countries with very harsh training methods from participating in international competitions should be banned.,"[2, 3, 1, 1, 3]",2.0,0.8,0
+234,Cramming before exams is a bad idea,"[4, 3, 4, 4, 3]",3.6,0.24,0
+235,Create a National High Speed Rail System in the U.S.,"[3, 3, 3, 4, 4]",3.4,0.24,0
+236,Create a UN standing army,"[2, 2, 2, 2, 2]",2.0,0.0,0
+237,Create an African Criminal Court,"[4, 3, 3, 3, 3]",3.2,0.16,0
+238,Create an international treaty/ban on cyber-attacks,"[4, 5, 3, 4, 4]",4.0,0.4,0
+239,Creationism should be discussed in school science lessons,"[2, 3, 4, 3, 2]",2.8,0.56,0
+240,Criminal justice should focus more on rehabilitation,"[3, 4, 4, 4, 4]",3.8,0.16,0
+241,"Criminal trials should not be televised, and the ICC is no exception","[4, 1, 2, 3, 2]",2.4,1.04,0
+242,Cultural property residing in museums must be returned to its place of origin,"[2, 5, 2, 4, 2]",3.0,1.6,0
+243,Cut aid to African states that criminalise homosexuality,"[3, 4, 2, 2, 2]",2.6,0.64,0
+244,Cyberbullies must be punished with prison even if under 18,"[1, 2, 2, 3, 3]",2.2,0.56,0
+245,DNA testing is worth the money,"[4, 3, 4, 3, 3]",3.4,0.24,0
+246,Danish newspapers should not have published cartoons depicting the Prophet Mohammed,"[2, 2, 2, 2, 2]",2.0,0.0,0
+247,Death penalty is justified,"[2, 2, 4, 2, 2]",2.4,0.64,0
+248,Defending the enemies of one's nation is legitimate free speech,"[3, 1, 3, 3, 1]",2.2,0.96,0
+249,Degrees in the creative arts are luxuries society can no longer afford,"[1, 2, 3, 3, 2]",2.2,0.56,0
+250,Democracies should ban the display of communist and Nazi symbols,"[4, 4, 3, 4, 2]",3.4,0.64,0
+251,Democracy Is the Best Form of Government,"[4, 4, 4, 4, 4]",4.0,0.0,0
+252,"Democracy has to be imposed, if needed","[3, 2, 3, 3, 1]",2.4,0.64,0
+253,Deny Organs to Non-Donors,"[2, 2, 1, 3, 2]",2.0,0.4,0
+254,Deregulation and tax cuts should be embraced to lead the world out of economic crisis.,"[2, 2, 1, 2, 1]",1.6,0.24,0
+255,Developed Countries Should Accept More Refugees,"[4, 4, 4, 4, 4]",4.0,0.0,0
+256,Developing nations should place restrictions on rural-urban migration,"[3, 2, 3, 2, 3]",2.6,0.24,0
+257,Dictatorship Is the Best Path to Development,"[1, 1, 1, 2, 1]",1.2,0.16,0
+258,Dictatorship is the best path to development,"[1, 1, 2, 1, 2]",1.4,0.24,0
+259,Discipline In Schools Needs To Be Improved,"[4, 2, 3, 4, 4]",3.4,0.64,0
+260,Disclose previous convictions in court,"[2, 3, 3, 3, 3]",2.8,0.16,0
+261,Do not allow companies to collect/sell the personal data of their clients,"[2, 4, 5, 5, 4]",4.0,1.2,0
+262,Does Mother Nature rule the world,"[3, 1, 3, 3, 3]",2.6,0.64,0
+263,Does campaign finance in the United States need to be fixed?,"[3, 4, 3, 3, 4]",3.4,0.24,0
+264,Domestic intelligence agencies have a legitimate role to play in democracy,"[3, 3, 4, 4, 4]",3.6,0.24,0
+265,Downloading music without permission is morally equivalent to theft,"[2, 4, 4, 5, 3]",3.6,1.04,0
+266,Drones Should Be Used to Take Out Enemy Combatants,"[5, 2, 1, 2, 2]",2.4,1.84,0
+267,During riots it might make sense to block access to social messaging networks,"[2, 2, 3, 2, 2]",2.2,0.16,0
+268,EU member states should guarantee people under 25 a temporary workplace when they have been unemployed for six months,"[3, 3, 3, 3, 3]",3.0,0.0,0
+269,Electronic tags are a good idea,"[5, 4, 3, 4, 3]",3.8,0.56,0
+270,Eliminate All Nuclear Weapons,"[5, 4, 3, 4, 4]",4.0,0.4,0
+271,Employees Should Be Compelled To Disclose Their HIV Status to Employers,"[2, 2, 2, 1, 2]",1.8,0.16,0
+272,Encourage fewer people to go to university,"[3, 3, 3, 1, 3]",2.6,0.64,0
+273,Endangered species should be protected,"[4, 4, 4, 4, 4]",4.0,0.0,0
+274,English has to become the official language of the United States,"[1, 3, 2, 2, 2]",2.0,0.4,0
+275,Eritrea is responsible for its isolation,"[3, 2, 3, 3, 3]",2.8,0.16,0
+276,Ethiopia is right to build a dam on the River Nile,"[4, 3, 3, 3, 4]",3.4,0.24,0
+277,Europe should be federal,"[2, 3, 3, 5, 3]",3.2,0.96,0
+278,Europe still needs a constitution,"[3, 4, 3, 3, 4]",3.4,0.24,0
+279,European Parliament elections should involve only one voting district: all of Europe and not separate country seats,"[2, 2, 4, 4, 1]",2.6,1.44,0
+280,Euthanasia or mercy killing is justified,"[3, 2, 2, 1, 1]",1.8,0.56,0
+281,Every child should have a mobile phone.,"[2, 2, 1, 2, 2]",1.8,0.16,0
+282,Everyone Should Automatically Be Opted into an Organ Donation Scheme,"[4, 4, 4, 3, 4]",3.8,0.16,0
+283,Everyone should go vegetarian,"[2, 5, 5, 3, 3]",3.6,1.44,0
+284,Evolution has Disproved Creationism,"[4, 4, 3, 1, 4]",3.2,1.36,0
+285,Examinations are a fair way of testing our knowledge,"[3, 3, 4, 4, 3]",3.4,0.24,0
+286,Experience is the key success for entrepreneurship.,"[4, 4, 4, 3, 3]",3.6,0.24,0
+287,Faith schools must be banned,"[2, 3, 2, 2, 2]",2.2,0.16,0
+288,Fast Food Advertising Should Be Banned,"[3, 4, 5, 2, 2]",3.2,1.36,0
+289,Federal States are better than unitary nations,"[3, 3, 3, 3, 4]",3.2,0.16,0
+290,Feminism Is Still Needed,"[4, 4, 4, 4, 4]",4.0,0.0,0
+291,Fighting should be allowed in hockey.,"[2, 2, 3, 3, 2]",2.4,0.24,0
+292,"Film stars, music stars and other popular entertainers should not be participating in party-political campaigns","[1, 3, 3, 4, 1]",2.4,1.44,0
+293,"Financial Assistance for the Poor Should Be the Responsibility of Charities, Not Government","[5, 1, 3, 1, 2]",2.4,2.24,0
+294,Fines should be made relative to income,"[3, 4, 3, 3, 3]",3.2,0.16,0
+295,Football does unify us,"[3, 4, 3, 5, 4]",3.8,0.56,0
+296,Force has to be used to protect human rights abroad,"[2, 3, 3, 1, 2]",2.2,0.56,0
+297,"Force the media to display, promote and report women’s sport equally to men’s sport.","[4, 4, 5, 4, 4]",4.2,0.16,0
+298,Force think tanks to reveal all of their sources of funding,"[2, 3, 3, 2, 3]",2.6,0.24,0
+299,Forced evictions are necessary for African cities to become global players.,"[1, 3, 4, 3, 3]",2.8,0.96,0
+300,Forced marriage should be banned,"[4, 4, 4, 4, 4]",4.0,0.0,0
+301,Foreign workers should be given the right to vote in local elections where they work,"[4, 4, 4, 3, 4]",3.8,0.16,0
+302,Former colonial powers should pay reparations to former colonies,"[4, 4, 4, 4, 4]",4.0,0.0,0
+303,France is right to intervene in Mali,"[5, 3, 5, 3, 4]",4.0,0.8,0
+304,Free press is vital in democracy,"[4, 4, 4, 4, 4]",4.0,0.0,0
+305,Fund education using a voucher scheme,"[3, 4, 3, 3, 3]",3.2,0.16,0
+306,Fund needle exchanges,"[5, 4, 3, 4, 3]",3.8,0.56,0
+307,"G20 protests – at best a waste of time, at worst a dangerous disruption","[2, 2, 1, 5, 3]",2.6,1.84,0
+308,Gabon hosting the Africa Cup of Nations was a good thing,"[3, 3, 3, 4, 3]",3.2,0.16,0
+309,Gambling must be banned,"[2, 2, 2, 2, 2]",2.0,0.0,0
+310,Gay couples should be allowed to marry,"[4, 4, 4, 4, 4]",4.0,0.0,0
+311,Gay marriage should be legal,"[4, 4, 4, 4, 4]",4.0,0.0,0
+312,Gender Equality is Treating Men and Women in the Same Way,"[2, 4, 1, 2, 3]",2.4,1.04,0
+313,Gender equality will not happen anytime soon,"[3, 3, 3, 2, 3]",2.8,0.16,0
+314,Gender quotas in the EU are advantageous for the economies of member states,"[3, 3, 2, 3, 3]",2.8,0.16,0
+315,Genetics is a defence to murder,"[3, 1, 1, 1, 2]",1.6,0.64,0
+316,German prosecutors should investigate NSA surveillance of Angela Merkel,"[3, 4, 4, 3, 2]",3.2,0.56,0
+317,German unification has been a success,"[3, 3, 3, 4, 3]",3.2,0.16,0
+318,Ghana’s ban on smoking in public places is a model for Africa,"[3, 5, 4, 3, 3]",3.6,0.64,0
+319,Global Warming is not an issue,"[2, 2, 2, 1, 1]",1.6,0.24,0
+320,Goal line technology has to be adopted in football,"[3, 4, 3, 4, 4]",3.6,0.24,0
+321,Golf is a Sport,"[4, 4, 4, 4, 4]",4.0,0.0,0
+322,Google is the extremely reliable source of information,"[3, 1, 3, 5, 3]",3.0,1.6,0
+323,Google shouldn’t censor its search results in China,"[1, 4, 2, 2, 3]",2.4,1.04,0
+324,Gorbachev Was Responsible for The Collapse Of The USSR,"[1, 2, 2, 2, 3]",2.0,0.4,0
+325,Gorbachev was a key player in the fall of the Berlin Wall,"[5, 4, 4, 4, 4]",4.2,0.16,0
+326,Government must be Big and Beefy,"[3, 2, 3, 2, 3]",2.6,0.24,0
+327,Government should be required to obtain warrants to access data that can be used to track an individual,"[3, 4, 4, 4, 3]",3.6,0.24,0
+328,Governments Should Actively Promote Multiculturalism,"[4, 3, 3, 5, 4]",3.8,0.56,0
+329,Governments Should Pay Compensation For Terrorist Atrocities Carried Out By Their Citizens,"[4, 4, 4, 4, 4]",4.0,0.0,0
+330,Governments Should Put Wealth Redistribution Ahead Of Wealth Creation,"[3, 2, 1, 3, 3]",2.4,0.64,0
+331,Governments Should Try To Reduce The Gap Between Their Richest And Poorest Citizens,"[4, 4, 4, 4, 4]",4.0,0.0,0
+332,Governments be allowed to disrupt Internet service on grounds of national security.,"[1, 2, 1, 2, 2]",1.6,0.24,0
+333,Governments of resource-rich nations should impose high taxes on mining and extraction,"[3, 3, 3, 3, 4]",3.2,0.16,0
+334,Governments should ban the media from reporting hostage-taking,"[2, 2, 3, 2, 3]",2.4,0.24,0
+335,Governments should introduce a flat tax,"[5, 3, 3, 3, 3]",3.4,0.64,0
+336,Governments should lower the voting age to 16,"[4, 4, 4, 3, 3]",3.6,0.24,0
+337,Governments should prioritise spending money on youth,"[4, 4, 4, 3, 4]",3.8,0.16,0
+338,Governments should spend their way out of the recession,"[2, 4, 3, 3, 3]",3.0,0.4,0
+339,Grant politicians immunity from prosecution,"[5, 2, 2, 2, 2]",2.6,1.44,0
+340,Grant the EU a permanent seat on the UN Security Council,"[3, 3, 3, 2, 3]",2.8,0.16,0
+341,Greece should default on its debt and return to the Drachma,"[2, 2, 2, 2, 2]",2.0,0.0,0
+342,"Guinea-Bissau should not let itself be turned in to a front of the US’ ""war on drugs""","[1, 2, 3, 2, 2]",2.0,0.4,0
+343,HIV/AIDS: There Should Be Compulsory Testing and Labeling of People with HIV,"[3, 2, 4, 2, 2]",2.6,0.64,0
+344,Hacking Can Be Justified,"[1, 2, 2, 2, 2]",1.8,0.16,0
+345,Handguns must be banned in Washington D.C.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+346,Hate crime 'enhancements' are unjust,"[1, 4, 1, 3, 4]",2.6,1.84,0
+347,Hate speech on campus has to censored,"[4, 2, 2, 2, 5]",3.0,1.6,0
+348,Have no elections rather than sham elections,"[4, 3, 2, 1, 1]",2.2,1.36,0
+349,Healthy eating should be made mandatory,"[3, 2, 3, 3, 4]",3.0,0.4,0
+350,Heavy drinkers should be denied liver transplants,"[2, 2, 2, 2, 2]",2.0,0.0,0
+351,High taxes are necessary for an effective state,"[3, 3, 3, 3, 3]",3.0,0.0,0
+352,Hillary Clinton would make a better president for America,"[2, 3, 3, 5, 3]",3.2,0.96,0
+353,Historical Artefacts Should Be Repatriated to Their Country of Origin,"[4, 4, 4, 4, 5]",4.2,0.16,0
+354,History as a subject in school is needed,"[4, 3, 4, 4, 3]",3.6,0.24,0
+355,History has no place in the classroom,"[2, 2, 1, 2, 2]",1.8,0.16,0
+356,Hold students legally responsible for bullying if it resulted in the victim's death,"[4, 3, 4, 3, 4]",3.6,0.24,0
+357,Home Schooling Should Be Banned,"[2, 2, 2, 2, 1]",1.8,0.16,0
+358,Homework is a waste of time,"[3, 2, 2, 3, 2]",2.4,0.24,0
+359,Homework is beneficial,"[4, 4, 4, 4, 4]",4.0,0.0,0
+360,Homework should be banned.,"[2, 1, 2, 2, 2]",1.8,0.16,0
+361,Homework should have a limit,"[4, 3, 1, 2, 4]",2.8,1.36,0
+362,Homosexuals should be able to adopt,"[4, 3, 4, 4, 4]",3.8,0.16,0
+363,Hosting the Olympic Games is beneficial,"[4, 4, 3, 4, 3]",3.6,0.24,0
+364,Hosting the Olympics is a good investment,"[3, 3, 5, 3, 4]",3.6,0.64,0
+365,Hosting the world cup is beneficial,"[3, 4, 4, 3, 3]",3.4,0.24,0
+366,Housewives Are More Responsible Mothers Than Working Women,"[1, 3, 2, 3, 3]",2.4,0.64,0
+367,Housewives should be paid for their work,"[3, 4, 4, 4, 4]",3.8,0.16,0
+368,Human Cloning has to be banned,"[2, 1, 3, 1, 2]",1.8,0.56,0
+369,Human activity is primarily responsible for global climate change,"[4, 4, 4, 2, 4]",3.6,0.64,0
+370,Humans should eat meat,"[3, 4, 2, 2, 2]",2.6,0.64,0
+371,I believe in manned space flight,"[4, 4, 4, 4, 5]",4.2,0.16,0
+372,I believe in the Right to be forgotten,"[3, 3, 3, 3, 3]",3.0,0.0,0
+373,ID cards and the National Identity Register should be scrapped,"[2, 1, 2, 2, 2]",1.8,0.16,0
+374,Illegal downloaders should be cut off from the internet,"[2, 1, 2, 3, 4]",2.4,1.04,0
+375,Illegal immigrants must be given drivers licenses,"[3, 4, 3, 4, 4]",3.6,0.24,0
+376,Immunity for head of state is a good idea,"[3, 3, 3, 3, 3]",3.0,0.0,0
+377,Implent the Virtual Doctor Project in Zambia,"[3, 3, 4, 3, 3]",3.2,0.16,0
+378,Improving access to contraception will lower the number of teenage pregnancies,"[4, 4, 4, 5, 4]",4.2,0.16,0
+379,"In Parliamentary Democracies, A Change Of Prime Minister Should Automatically Trigger A General Election.","[3, 3, 3, 1, 2]",2.4,0.64,0
+380,In a democracy all votes should be equal.,"[4, 4, 4, 4, 3]",3.8,0.16,0
+381,"In the conflict between Israel and Palestine, a two-state solution is better justified than a one-state solution","[4, 4, 4, 4, 4]",4.0,0.0,0
+382,Increased taxes are good for America,"[2, 1, 1, 2, 2]",1.6,0.24,0
+383,India should give up Kashmir,"[2, 2, 2, 2, 1]",1.8,0.16,0
+384,India’s Ban on the Satanic Verses is justified,"[2, 3, 3, 2, 2]",2.4,0.24,0
+385,Indiscriminate NSA surveillance of the rest of the world hurts the United States,"[4, 3, 4, 4, 3]",3.6,0.24,0
+386,Individuals have a moral obligation to assist people in need,"[4, 4, 4, 4, 4]",4.0,0.0,0
+387,Individuals should be able to legally bypass copyright protection technologies for fair use reasons.,"[1, 4, 3, 5, 3]",3.2,1.76,0
+388,Individuals who have committed atrocities in the Syrian Civil War should be investigated by the ICC,"[4, 5, 4, 4, 2]",3.8,0.96,0
+389,Inheritance tax should be raised to 100% for everyone born in the UK,"[1, 1, 2, 2, 2]",1.6,0.24,0
+390,Instant Replay Should Be Used in Major League Baseball,"[3, 3, 3, 3, 4]",3.2,0.16,0
+391,Institute a mandatory retirement age,"[1, 2, 2, 3, 3]",2.2,0.56,0
+392,Intellectual property rights have to be abolished,"[2, 2, 2, 1, 2]",1.8,0.16,0
+393,International students are charged unfairly high tuition fees at UK universities,"[4, 4, 2, 4, 4]",3.6,0.64,0
+394,Internet access is a human right,"[4, 5, 3, 4, 4]",4.0,0.4,0
+395,Internet service providers should be allowed to block access to extremist websites,"[2, 1, 2, 5, 1]",2.2,2.16,0
+396,Introduce year round schooling,"[3, 1, 3, 3, 2]",2.4,0.64,0
+397,Invest in Renewable Technologies rather than Nuclear Power,"[4, 4, 4, 4, 4]",4.0,0.0,0
+398,Islamic State/Daesh is the most significant threat to the west,"[3, 3, 3, 2, 3]",2.8,0.16,0
+399,Israel should recognise the Palestinian right of return,"[2, 2, 2, 3, 2]",2.2,0.16,0
+400,Israel should return to its pre-1967 borders,"[2, 3, 3, 3, 2]",2.6,0.24,0
+401,Israel's 2008-2009 military operations against Gaza were justified,"[1, 2, 3, 2, 4]",2.4,1.04,0
+402,It does matter where you go to university or college,"[4, 4, 4, 5, 2]",3.8,0.96,0
+403,It is a good idea to build the Keystone XL pipeline,"[4, 5, 5, 4, 4]",4.4,0.24,0
+404,It is a good idea to have a system of  participatory democracy,"[3, 4, 4, 3, 3]",3.4,0.24,0
+405,It is a good idea to lease Crimea to Russia,"[2, 2, 1, 2, 2]",1.8,0.16,0
+406,It is appropriate to build a muslim community center (aka the ''Ground Zero Mosque'') near the World Trade Center site ,"[3, 4, 3, 1, 5]",3.2,1.76,0
+407,It is be ok to use racial profiling as part of airport security checks,"[1, 2, 2, 1, 1]",1.4,0.24,0
+408,It is crucial to explore the universe,"[4, 4, 4, 4, 4]",4.0,0.0,0
+409,It is crucial to support the development of a missile defence system,"[5, 4, 4, 3, 4]",4.0,0.4,0
+410,It is fine to do random drug-testing in schools,"[2, 2, 2, 4, 1]",2.2,0.96,0
+411,It is fine to kill one to save many,"[3, 2, 1, 2, 2]",2.0,0.4,0
+412,It is good to gossip,"[3, 2, 1, 2, 1]",1.8,0.56,0
+413,It is important to use a graduated response to combat unauthorised file-sharing of copyrighted material,"[4, 4, 2, 4, 5]",3.8,0.96,0
+414,It is important to use foreign aid funds to research and distribute software that allows bloggers and journalists in non-democratic countries to evade censorship and conceal their online activities.,"[4, 4, 4, 3, 4]",3.8,0.16,0
+415,It is morally permissible for victims to use deadly force as a deliberate response to repeated domestic violence,"[2, 1, 2, 2, 2]",1.8,0.16,0
+416,It is necessary to offer increased aid to developing world countries that encourage and accept large influxes of immigrants,"[3, 3, 3, 3, 3]",3.0,0.0,0
+417,It is selfish to have more than two children,"[2, 1, 2, 2, 2]",1.8,0.16,0
+418,It is sometimes right for the government to restrict freedom of speech,"[2, 2, 3, 2, 3]",2.4,0.24,0
+419,It is time to stop buying bottled water,"[4, 3, 3, 4, 4]",3.6,0.24,0
+420,It is worth voting,"[4, 4, 3, 4, 4]",3.8,0.16,0
+421,It is wrong to tolerate unjust laws,"[5, 4, 4, 5, 5]",4.6,0.24,0
+422,It makes sense to drive to an out of town to a shopping centre,"[3, 3, 3, 3, 3]",3.0,0.0,0
+423,It should be allowed to have military recruitment in schools,"[2, 2, 1, 2, 2]",1.8,0.16,0
+424,It should be allowed to patent genes,"[3, 5, 3, 4, 4]",3.8,0.56,0
+425,It should be compulsory for all mothers to breastfeed for the first six months of their babies lives,"[4, 4, 3, 1, 3]",3.0,1.2,0
+426,Jerusalem should be divided,"[2, 2, 3, 2, 3]",2.4,0.24,0
+427,Job applicants should have to disclose their spent criminal convictions,"[2, 3, 4, 3, 4]",3.2,0.56,0
+428,Joe Calzaghe deserves to be recognized as one of the greatest boxers of all time,"[4, 4, 4, 4, 5]",4.2,0.16,0
+429,Julian Assange is a journalist,"[4, 4, 5, 4, 4]",4.2,0.16,0
+430,Junk Food Should Be Banned,"[2, 2, 4, 2, 1]",2.2,0.96,0
+431,Keep the Sabbath as a Day of Rest,"[4, 4, 4, 4, 3]",3.8,0.16,0
+432,Kill One to Save Many,"[3, 1, 1, 3, 3]",2.2,0.96,0
+433,Labels on food must be mandated to encourage people to eat better,"[4, 4, 3, 4, 4]",3.8,0.16,0
+434,Lack of Parental Guidance Is Mainly Responsible for Children Being Violent and Aggressive in School,"[3, 2, 3, 2, 2]",2.4,0.24,0
+435,Lady Macbeth is the real driving force behind King Duncan’s murder in Shakespeare’s Macbeth,"[4, 4, 4, 5, 3]",4.0,0.4,0
+436,Language does control thought,"[3, 5, 2, 3, 3]",3.2,0.96,0
+437,Launching a military coup against a democratic government can be justified,"[1, 1, 1, 1, 2]",1.2,0.16,0
+438,Leaders of countries that use extra-territorial rendition should be tried for war crimes,"[5, 4, 3, 2, 5]",3.8,1.36,0
+439,Leaving the EU would increase British security,"[3, 1, 3, 4, 3]",2.8,0.96,0
+440,Legal empowerment is provided for women through land titling,"[3, 3, 3, 3, 4]",3.2,0.16,0
+441,Legalize sex work in order to make controls more feasible and effective to combat HIV/AIDS,"[5, 4, 3, 4, 3]",3.8,0.56,0
+442,Lesotho should be annexed by South Africa,"[2, 2, 1, 2, 2]",1.8,0.16,0
+443,Less time outdoors is severely detrimental to the physical and emotional wellbeing of children,"[5, 4, 5, 4, 4]",4.4,0.24,0
+444,Liberal democracies are better at providing people’s needs than non-democracies.,"[3, 5, 4, 5, 3]",4.0,0.8,0
+445,Limit the free speech rights of corporations that are granted legal personhood,"[3, 2, 2, 2, 3]",2.4,0.24,0
+446,Long term cooperation between Russia and the United States is possible.,"[3, 4, 3, 3, 3]",3.2,0.16,0
+447,Lowering the federal corporate income tax rate does create jobs,"[4, 4, 4, 4, 4]",4.0,0.0,0
+448,Macs are better than PCs,"[3, 3, 1, 2, 3]",2.4,0.64,0
+449,Major league baseball should continue to allow collisions at home plate,"[2, 4, 3, 2, 2]",2.6,0.64,0
+450,Make all museums free of charge,"[3, 3, 3, 3, 3]",3.0,0.0,0
+451,Make lessons in a foreign language compulsory for school pupils,"[4, 3, 4, 3, 2]",3.2,0.56,0
+452,Make sex education mandatory in schools,"[4, 4, 4, 4, 4]",4.0,0.0,0
+453,Make the raising of business and labour standards a prerequisite for developmental aid,"[5, 5, 4, 3, 4]",4.2,0.56,0
+454,Make-up is bad for us,"[2, 3, 2, 2, 3]",2.4,0.24,0
+455,Male infant circumcision is tantamount to child abuse,"[4, 2, 4, 2, 2]",2.8,0.96,0
+456,Man made climate change is a myth,"[1, 1, 2, 1, 2]",1.4,0.24,0
+457,Mandatory sentencing is fine.,"[3, 1, 2, 2, 2]",2.0,0.4,0
+458,Marriage is an outdated institution,"[3, 2, 2, 5, 2]",2.8,1.36,0
+459,Maths should be a compulsory subject at GCSE,"[5, 4, 4, 3, 4]",4.0,0.4,0
+460,Media reporting on violent crimes should be restricted,"[2, 3, 2, 2, 2]",2.2,0.16,0
+461,Men are the key to family planning in Uganda,"[3, 3, 3, 3, 3]",3.0,0.0,0
+462,Mexican culture was incurably damaged by the introduction of Christianity,"[2, 1, 2, 2, 2]",1.8,0.16,0
+463,Military action to intervene during atrocities without United Nations Security Council approval can be legal,"[2, 1, 3, 2, 1]",1.8,0.56,0
+464,"Mind Sports Such as Chess, Quizzing and Debating Should Be Olympic Sports","[5, 4, 5, 3, 4]",4.2,0.56,0
+465,Minors Should Be Able to Obtain Abortions Without Parental Consent,"[4, 2, 2, 4, 2]",2.8,0.96,0
+466,Mixed Martial Arts (UFC) is a form of human cockfighting,"[2, 3, 1, 2, 1]",1.8,0.56,0
+467,Money Is the Root of All Evil,"[2, 3, 1, 2, 2]",2.0,0.4,0
+468,Money undermines sport’s values,"[3, 3, 5, 3, 3]",3.4,0.64,0
+469,More gun control laws should be enacted,"[3, 4, 3, 3, 4]",3.4,0.24,0
+470,Mossad should carry out extrajudicial killings,"[1, 1, 2, 1, 1]",1.2,0.16,0
+471,Most people are a little bit gay,"[3, 3, 3, 3, 3]",3.0,0.0,0
+472,Music That Glorifies Crime Should Be Banned,"[4, 5, 2, 4, 4]",3.8,0.96,0
+473,Music containing lyrics that glorify violent and criminal lifestyles should be banned,"[2, 4, 4, 4, 4]",3.6,0.64,0
+474,Music should be free for all,"[3, 3, 3, 3, 4]",3.2,0.16,0
+475,Music that glorifies violence against women should be banned,"[4, 5, 4, 5, 4]",4.4,0.24,0
+476,NATO countries and the government of Afghanistan should negotiate a power-sharing deal with the Taliban,"[3, 3, 3, 1, 3]",2.6,0.64,0
+477,NATO has succeeded in Afghanistan,"[3, 3, 3, 3, 3]",3.0,0.0,0
+478,National service should be re-introduced,"[3, 3, 3, 3, 1]",2.6,0.64,0
+479,Nations of the world should increase protection of the economic and social rights of migrants,"[4, 4, 4, 4, 4]",4.0,0.0,0
+480,Neil Armstrong did actually walk on the Moon,"[5, 4, 4, 4, 5]",4.4,0.24,0
+481,Neo-functionalism explains the integration of the European Union,"[3, 3, 4, 3, 4]",3.4,0.24,0
+482,Net Neutrality – All Internet Traffic Should Be Treated Equally,"[4, 4, 4, 4, 4]",4.0,0.0,0
+483,Net neutrality should be restored,"[4, 4, 4, 4, 4]",4.0,0.0,0
+484,New York City has the right to regulate the size of sodas bought on the market,"[3, 4, 3, 4, 4]",3.6,0.24,0
+485,New prisons need to be built to ease overcrowding,"[3, 3, 2, 3, 3]",2.8,0.16,0
+486,News organisations should be free to exclude news of homosexuality where it causes offence to their viewers,"[2, 2, 2, 2, 2]",2.0,0.0,0
+487,Newspapers Are a Thing of the Past,"[3, 3, 3, 2, 3]",2.8,0.16,0
+488,Newspapers belong to the past,"[2, 1, 4, 3, 3]",2.6,1.04,0
+489,Nollywood could be an effective instrument to change perceptions of Africa,"[3, 4, 4, 3, 3]",3.4,0.24,0
+490,Nuclear technology must be adopted,"[3, 1, 3, 3, 3]",2.6,0.64,0
+491,"Obese people, in countries with a national health service, should face higher taxes","[5, 3, 3, 3, 2]",3.2,0.96,0
+492,Obesity is a disease,"[4, 3, 3, 4, 5]",3.8,0.56,0
+493,Offshoring is a good idea,"[2, 2, 3, 3, 3]",2.6,0.24,0
+494,Oil Companies Should Not Be Allowed To Drill Offshore,"[1, 2, 2, 2, 2]",1.8,0.16,0
+495,Online Shopping Is Better Than Offline Shopping,"[4, 4, 4, 5, 4]",4.2,0.16,0
+496,Online education does more good than harm,"[4, 4, 5, 4, 4]",4.2,0.16,0
+497,Online gambling has to be banned,"[2, 3, 2, 1, 2]",2.0,0.4,0
+498,Only buildings that are historically important should be preserved,"[4, 5, 3, 3, 3]",3.6,0.64,0
+499,Open primaries are the most effective method of selecting candidates for elections,"[4, 1, 4, 3, 3]",3.0,1.2,0
+500,Opinion polls harm the democratic process,"[3, 3, 3, 2, 2]",2.6,0.24,0
+501,PHILOSOPHY – Utilitarianism isn’t as fair as it initially seems,"[2, 2, 1, 2, 3]",2.0,0.4,0
+502,Paparazzi and press intrude too much into celebrities lives,"[3, 3, 2, 4, 4]",3.2,0.56,0
+503,Parents have to be allowed to monitor their children's online and mobile communications,"[3, 4, 4, 4, 5]",4.0,0.4,0
+504,Parents of obese children be prosecuted with neglect,"[2, 2, 2, 2, 4]",2.4,0.64,0
+505,Parents or other adults should be able to ban books from schools and libraries.,"[1, 1, 2, 2, 2]",1.6,0.24,0
+506,Parents should be able to choose the sex of their children,"[2, 2, 2, 3, 2]",2.2,0.16,0
+507,Parents should be allowed to genetically screen foetuses for heritable diseases,"[4, 4, 4, 3, 4]",3.8,0.16,0
+508,Parents should be held responsible for their school-going children's discipline problems,"[4, 4, 4, 4, 3]",3.8,0.16,0
+509,Parents should have the right to do background checks on those looking after their children,"[4, 4, 4, 4, 4]",4.0,0.0,0
+510,Parents should introduce children to alcohol (in moderation) at an early age,"[1, 2, 2, 2, 2]",1.8,0.16,0
+511,Parents should not allow young people to live at home again after graduating,"[2, 1, 3, 3, 3]",2.4,0.64,0
+512,Partial birth abortions should be banned,"[2, 2, 2, 2, 2]",2.0,0.0,0
+513,Patents on life-saving drugs should be bypassed,"[3, 3, 4, 3, 3]",3.2,0.16,0
+514,Pay state school teachers based on merit,"[4, 3, 4, 4, 4]",3.8,0.16,0
+515,Penalise religious hate speech,"[4, 4, 3, 4, 4]",3.8,0.16,0
+516,Pensions should be privatised,"[2, 2, 4, 2, 2]",2.4,0.64,0
+517,People on job seekers allowance who refuse a job should lose their benefits,"[2, 3, 2, 2, 2]",2.2,0.16,0
+518,People should be allowed to do what they want to their own bodies,"[4, 4, 4, 4, 4]",4.0,0.0,0
+519,People should be allowed to sell their own organs,"[2, 2, 4, 2, 3]",2.6,0.64,0
+520,People should become vegetarian,"[3, 4, 4, 4, 4]",3.8,0.16,0
+521,People should have a right to private education,"[4, 5, 4, 4, 4]",4.2,0.16,0
+522,People should have the right to die,"[2, 1, 3, 3, 2]",2.2,0.56,0
+523,People should lose their jobs for saying the wrong thing,"[5, 3, 1, 2, 2]",2.6,1.84,0
+524,Performing tests on animals must be banned,"[4, 5, 4, 5, 5]",4.6,0.24,0
+525,Persistent Bullies Should be Expelled,"[4, 5, 4, 4, 4]",4.2,0.16,0
+526,Personality is more important than ability,"[3, 3, 2, 3, 3]",2.8,0.16,0
+527,Physical Chastisement of Children Should Be Illegal,"[5, 4, 4, 4, 4]",4.2,0.16,0
+528,Physical Education In Schools Should Be Compulsory,"[4, 4, 4, 4, 4]",4.0,0.0,0
+529,Place Cameras in Courtrooms to Televise Court Cases,"[5, 2, 4, 4, 3]",3.6,1.04,0
+530,Plastic Bags should be banned,"[4, 4, 4, 5, 4]",4.2,0.16,0
+531,Playoffs must be implemented in collegiate level american football,"[3, 3, 4, 1, 3]",2.8,0.96,0
+532,Poetry should not be taught in schools,"[2, 3, 2, 3, 2]",2.4,0.24,0
+533,Police Service Should Be Armed (UK),"[2, 1, 2, 1, 2]",1.6,0.24,0
+534,Police body cameras should be allowed,"[4, 3, 4, 4, 4]",3.8,0.16,0
+535,Polls are accurate predictors of election results,"[3, 4, 3, 3, 3]",3.2,0.16,0
+536,Polygamous Marriage Should Be Recognised,"[4, 4, 4, 3, 3]",3.6,0.24,0
+537,Poorer Countries Should Abandon Free Trade Agreements,"[3, 2, 2, 2, 2]",2.2,0.16,0
+538,Positive Discrimination Towards Women in Society Is Justified,"[1, 2, 1, 2, 2]",1.6,0.24,0
+539,Positive discrimination has to be used to increase diversity in university,"[4, 3, 2, 2, 3]",2.8,0.56,0
+540,Positive discrimination must be used to put more women in parliament,"[3, 3, 3, 4, 4]",3.4,0.24,0
+541,Post Office Should Be Privatized,"[3, 3, 2, 2, 1]",2.2,0.56,0
+542,Post conflict peace cannot be sustained without impartial justice,"[4, 4, 4, 3, 4]",3.8,0.16,0
+543,Poverty is the most important security issue facing Africa,"[4, 5, 2, 3, 3]",3.4,1.04,0
+544,Power only has two dimensions,"[3, 2, 2, 2, 2]",2.2,0.16,0
+545,Pre-nuptial agreements should not be recognised in divorce courts,"[2, 2, 2, 2, 3]",2.2,0.16,0
+546,Prescription drugs are overpriced,"[4, 2, 2, 4, 4]",3.2,0.96,0
+547,Prescription drugs should be advertised directly to consumers,"[3, 3, 3, 3, 3]",3.0,0.0,0
+548,Prioritize eliminating the budget deficit over increasing domestic spending,"[3, 3, 3, 2, 2]",2.6,0.24,0
+549,Prisoners Should Be Used For Medical Experiments Without Consent,"[1, 2, 1, 1, 1]",1.2,0.16,0
+550,Privacy Online is Important,"[4, 4, 4, 4, 4]",4.0,0.0,0
+551,Private universities in the UK must be encouraged,"[4, 4, 4, 4, 3]",3.8,0.16,0
+552,Professional sportsmen must be required to represent their countries at the international level,"[3, 3, 2, 2, 1]",2.2,0.56,0
+553,Prohibit retailers from selling certain items at a loss as a marketing device.,"[2, 3, 3, 3, 2]",2.6,0.24,0
+554,Promote safe sex through education at schools,"[4, 4, 4, 4, 4]",4.0,0.0,0
+555,Proportional representation is necessary.,"[4, 4, 3, 3, 3]",3.4,0.24,0
+556,Prosecutions help the healing process,"[3, 3, 3, 3, 3]",3.0,0.0,0
+557,Prostitution Should Be Legal,"[2, 4, 3, 3, 3]",3.0,0.4,0
+558,Prostitution has to be legalised,"[3, 4, 3, 3, 3]",3.2,0.16,0
+559,Prostitution should be legalised to protect sex workers from HIV/AIDS,"[4, 4, 4, 4, 3]",3.8,0.16,0
+560,Protect braille out of respect for free speech,"[3, 4, 4, 3, 4]",3.6,0.24,0
+561,Provide breakfast for all school students,"[3, 4, 5, 4, 4]",4.0,0.4,0
+562,Provision of higher education must be funded by taxing graduates,"[3, 2, 3, 3, 4]",3.0,0.4,0
+563,Public Transport Should Be Free,"[3, 5, 3, 3, 5]",3.8,0.96,0
+564,Public health concerns justify compulsory immunization,"[5, 4, 4, 3, 4]",4.0,0.4,0
+565,Public high school students in the United States ought not be required to pass standardized exit exams to graduate,"[3, 3, 2, 2, 2]",2.4,0.24,0
+566,Puerto Rico should seek American statehood,"[4, 4, 3, 4, 4]",3.8,0.16,0
+567,Put taxes/revenue from oil into a trust fund independent of politicians influence,"[4, 5, 4, 4, 4]",4.2,0.16,0
+568,Quebec should secede from Canada,"[3, 4, 3, 1, 2]",2.6,1.04,0
+569,Racial quotas must be set in South African rugby,"[4, 4, 2, 3, 3]",3.2,0.56,0
+570,Rail travel is the best mode of transport for the future,"[4, 3, 4, 3, 3]",3.4,0.24,0
+571,Rain Man is such a bad image of autism,"[4, 3, 2, 1, 4]",2.8,1.36,0
+572,Raise The School Leaving Age To 18,"[4, 4, 4, 4, 3]",3.8,0.16,0
+573,Raise the school leaving age to 18,"[4, 4, 3, 4, 4]",3.8,0.16,0
+574,Reality TV has gone too far,"[2, 2, 3, 3, 2]",2.4,0.24,0
+575,Reality TV shows are an important part of popular culture today.,"[3, 3, 3, 3, 3]",3.0,0.0,0
+576,Receiving multiple vaccines are safe,"[4, 4, 4, 4, 4]",4.0,0.0,0
+577,Recognise Kosovo as an independent state,"[4, 4, 3, 4, 4]",3.8,0.16,0
+578,Recreational marijuana should be legal,"[4, 4, 4, 4, 4]",4.0,0.0,0
+579,Refusing to stand for the National Anthem is an appropriate form of protest.,"[3, 3, 2, 2, 4]",2.8,0.56,0
+580,Reheat tea in the microwave,"[3, 3, 3, 2, 4]",3.0,0.4,0
+581,Religion In Itself Is A Purely Positive Force In The World,"[3, 3, 1, 3, 4]",2.8,0.96,0
+582,Religion does more harm than good,"[2, 2, 2, 4, 2]",2.4,0.64,0
+583,Religion is not necessary,"[3, 1, 2, 3, 2]",2.2,0.56,0
+584,Religions Should Not Qualify as Charities,"[2, 4, 2, 1, 2]",2.2,0.96,0
+585,Religious education Should be a part of the School curriculum,"[3, 3, 4, 3, 4]",3.4,0.24,0
+586,Religious freedom abroad should be one of the primary foreign policy concerns for any country,"[4, 2, 3, 3, 4]",3.2,0.56,0
+587,Religious symbols in public buildings must be banned,"[2, 1, 3, 2, 2]",2.0,0.4,0
+588,Remotely Controlled Weapons Systems Should Not Be Used In Combat,"[3, 4, 5, 5, 3]",4.0,0.8,0
+589,Remove Bush tax cuts for the wealthy,"[2, 4, 4, 4, 2]",3.2,0.96,0
+590,Remove the requirement for Catholic Priests to take a vow of celibacy,"[3, 2, 3, 3, 2]",2.6,0.24,0
+591,"Remove the words ""under God"" from the American Pledge of Allegiance","[4, 2, 3, 2, 2]",2.6,0.64,0
+592,Replace aid with remittances,"[2, 2, 3, 1, 3]",2.2,0.56,0
+593,Representative Democracy Is a Better Form of Government Than Direct Democracy,"[2, 4, 4, 4, 3]",3.4,0.64,0
+594,Resources have a negative influence on foreign policy in the Middle East,"[2, 3, 2, 2, 3]",2.4,0.24,0
+595,Restrict the right to Habeas Corpus as part of efforts to combat terrorism,"[2, 2, 2, 2, 2]",2.0,0.0,0
+596,Restrictions must be imposed on overseas players in football,"[4, 3, 2, 3, 2]",2.8,0.56,0
+597,Rich countries should actively recruit medical personnel from poorer countries,"[4, 4, 4, 3, 3]",3.6,0.24,0
+598,Roger Federer Is Not the Greatest Tennis Player of All Time,"[2, 2, 2, 2, 2]",2.0,0.0,0
+599,Romeo and Juliet do promote knife crime,"[2, 1, 2, 2, 2]",1.8,0.16,0
+600,Romeo and Juliet is unsuccessful as a tragedy,"[2, 1, 2, 4, 3]",2.4,1.04,0
+601,Rupert Murdoch is not a fit person to run an international media corporation,"[2, 2, 2, 2, 1]",1.8,0.16,0
+602,Russia has the right to send troops into Crimea,"[5, 5, 4, 2, 2]",3.6,1.84,0
+603,Russia is a land of democracy (not autocracy),"[3, 3, 3, 3, 3]",3.0,0.0,0
+604,Russia needs strong leadership,"[5, 4, 4, 4, 3]",4.0,0.4,0
+605,Sadomasochism must be decriminalized,"[3, 3, 4, 4, 4]",3.6,0.24,0
+606,Same sex relationships should have the same legal status as heterosexual relationships under EU law,"[5, 4, 4, 4, 4]",4.2,0.16,0
+607,Same-Sex Marriage Should Be Legal,"[4, 4, 4, 4, 4]",4.0,0.0,0
+608,Sanctions should be used to promote democracy,"[3, 3, 3, 3, 3]",3.0,0.0,0
+609,Sanctuary cities are beneficial,"[2, 3, 3, 2, 3]",2.6,0.24,0
+610,Sao Tome would drop relations with Taiwan in favour of Mainland China,"[3, 2, 2, 2, 1]",2.0,0.4,0
+611,School Day Should Be Extended,"[3, 3, 3, 3, 3]",3.0,0.0,0
+612,School Uniforms Should Be Mandatory,"[2, 3, 4, 3, 4]",3.2,0.56,0
+613,School uniforms must be banned,"[2, 2, 2, 2, 2]",2.0,0.0,0
+614,School vouchers should be encouraged,"[2, 4, 4, 4, 4]",3.6,0.64,0
+615,Science can determine human values,"[2, 3, 3, 3, 1]",2.4,0.64,0
+616,Scotland should cede from the union.,"[2, 3, 2, 2, 2]",2.2,0.16,0
+617,Security profiling at airports is justified,"[3, 4, 3, 3, 3]",3.2,0.16,0
+618,Self-determination of peoples is a human right,"[4, 4, 4, 4, 4]",4.0,0.0,0
+619,Send Yanukovych to The Hague,"[2, 3, 2, 2, 2]",2.2,0.16,0
+620,Sexist advertising must be banned,"[4, 4, 4, 4, 4]",4.0,0.0,0
+621,Should Turkey Be Accepted In The EU,"[3, 3, 2, 4, 4]",3.2,0.56,0
+622,Should the Cell Phones Be Allowed in Schools,"[3, 3, 2, 3, 3]",2.8,0.16,0
+623,Should the United States increase the foreign aid budget?,"[3, 3, 3, 4, 3]",3.2,0.16,0
+624,Should the United States scale back the War on Drugs?,"[3, 2, 3, 3, 3]",2.8,0.16,0
+625,Show the darker side of the formation of the nation,"[3, 2, 3, 2, 3]",2.6,0.24,0
+626,Sikh school pupils should be allowed to carry ceremonial daggers,"[3, 4, 4, 1, 3]",3.0,1.2,0
+627,Slang prevent young people from being able to communicate properly,"[1, 4, 2, 4, 3]",2.8,1.36,0
+628,Smokers should be denied access to state healthcare,"[2, 2, 2, 2, 2]",2.0,0.0,0
+629,Smoking in public spaces should be banned,"[4, 4, 4, 4, 4]",4.0,0.0,0
+630,Smoking should be banned in public places,"[4, 4, 4, 4, 5]",4.2,0.16,0
+631,Smoking should be made Illegal,"[4, 4, 5, 4, 4]",4.2,0.16,0
+632,Smoking should further be restricted,"[4, 4, 4, 4, 3]",3.8,0.16,0
+633,Social Media should be part of the curriculum,"[4, 3, 3, 5, 3]",3.6,0.64,0
+634,Social Security should be privatized ,"[2, 2, 3, 2, 2]",2.2,0.16,0
+635,Social deprivation causes crime,"[4, 3, 3, 4, 3]",3.4,0.24,0
+636,Social disgust is legitimate grounds for restriction of artistic expression,"[5, 2, 2, 2, 2]",2.6,1.44,0
+637,Social networking sites are good for our society,"[4, 4, 3, 3, 3]",3.4,0.24,0
+638,Socialism is Dead,"[2, 2, 3, 2, 2]",2.2,0.16,0
+639,Socialism is a failed government subdomain,"[2, 2, 2, 3, 2]",2.2,0.16,0
+640,South Africa should host an Olympics,"[4, 2, 3, 5, 4]",3.6,1.04,0
+641,South Ossetia should be independent,"[4, 5, 3, 3, 4]",3.8,0.56,0
+642,Space Exploration Is a Waste of Money,"[2, 2, 2, 2, 2]",2.0,0.0,0
+643,Space should not be used for military purposes,"[4, 4, 4, 4, 3]",3.8,0.16,0
+644,Spain should cede Ceuta and Melilla to Morocco,"[1, 2, 5, 2, 3]",2.6,1.84,0
+645,Speed limits should be reduced,"[2, 2, 3, 5, 1]",2.6,1.84,0
+646,Sports Have Became More About Making Money Than Playing Well,"[3, 4, 3, 2, 3]",3.0,0.4,0
+647,Sports initiations should be banned,"[3, 3, 3, 2, 2]",2.6,0.24,0
+648,State funding to universities have to be conditioned upon all academic work being made available to the general public,"[1, 3, 1, 2, 3]",2.0,0.8,0
+649,States ought not possess nuclear weapons,"[4, 3, 4, 2, 4]",3.4,0.64,0
+650,Stop sending development aid to India,"[2, 2, 2, 2, 3]",2.2,0.16,0
+651,Stop the Olympic Games,"[2, 3, 3, 1, 2]",2.2,0.56,0
+652,Store nuclear waste underground,"[3, 1, 3, 3, 3]",2.6,0.64,0
+653,Strict parenting works best,"[3, 2, 3, 1, 3]",2.4,0.64,0
+654,Student loan debt should be easier to discharge in bankruptcy,"[3, 3, 4, 3, 3]",3.2,0.16,0
+655,Students should have to wear school uniforms,"[2, 3, 3, 3, 4]",3.0,0.4,0
+656,Subsidise the translation of academic work in the languages of developing countries,"[5, 4, 4, 3, 4]",4.0,0.4,0
+657,Subsidize poor communities,"[3, 3, 3, 3, 4]",3.2,0.16,0
+658,Suicide should be a criminal offence,"[2, 2, 3, 2, 3]",2.4,0.24,0
+659,Sunbeds should be banned,"[2, 3, 4, 2, 2]",2.6,0.64,0
+660,Swearing should be illegal,"[2, 2, 2, 3, 3]",2.4,0.24,0
+661,Switzerland and Norway should apply to join the EU,"[3, 3, 3, 2, 3]",2.8,0.16,0
+662,Tablets should replace textbooks in K-12 schools,"[4, 3, 3, 3, 4]",3.4,0.24,0
+663,Take a visit the Yasukuni Shrine,"[3, 2, 2, 2, 3]",2.4,0.24,0
+664,Taking food thrown out by supermarkets should not be illegal,"[3, 4, 3, 4, 4]",3.6,0.24,0
+665,Tanzania’s taxation on mobile phones is a good model,"[3, 3, 3, 3, 2]",2.8,0.16,0
+666,Targeted online advertising on the basis of user profiles and demographics must be banned,"[3, 2, 1, 2, 2]",2.0,0.4,0
+667,Targeted sanctions have to be used to respond to cyber-attacks,"[3, 3, 4, 3, 3]",3.2,0.16,0
+668,Taxes on smoothies and fruit juices should be reduced,"[3, 3, 2, 2, 3]",2.6,0.24,0
+669,Teachers Should Have The Right To Punish Pupils Physically If The Parents Consent,"[2, 3, 4, 3, 1]",2.6,1.04,0
+670,Teachers must be banned from interacting with students via social networking websites.,"[2, 3, 2, 3, 2]",2.4,0.24,0
+671,Teachers should be armed,"[1, 2, 2, 2, 2]",1.8,0.16,0
+672,Teachers should get merit pay,"[4, 4, 3, 4, 4]",3.8,0.16,0
+673,Teachers should get tenure,"[3, 4, 3, 3, 4]",3.4,0.24,0
+674,Technological advancement promotes materialistic society,"[1, 3, 2, 2, 3]",2.2,0.56,0
+675,Television is one of the most effective mediums through which to teach and inspire youngsters,"[3, 3, 5, 4, 3]",3.6,0.64,0
+676,Ten Commandments:  Display in Schools,"[3, 3, 3, 3, 3]",3.0,0.0,0
+677,Tennessee is correct to protect teachers who wish to explore the merits of creationism,"[2, 2, 4, 2, 3]",2.6,0.64,0
+678,Terrorism can be justified,"[1, 1, 1, 1, 1]",1.0,0.0,0
+679,Terrorism should not be allowed publicity,"[4, 2, 3, 2, 2]",2.6,0.64,0
+680,Terrorists Should Be Subject to the Geneva Conventions,"[4, 4, 3, 5, 4]",4.0,0.4,0
+681,Terrorists should be subject to the Geneva Conventions,"[4, 4, 5, 4, 4]",4.2,0.16,0
+682,That Israel’s West Bank Settlements are an Obstacle to Peace,"[2, 3, 2, 2, 3]",2.4,0.24,0
+683,That Zero Tolerance Policing is a Good Tactic for Fighting Crime,"[3, 3, 3, 5, 2]",3.2,0.96,0
+684,The 2022 Football World Cup must be moved to the winter,"[2, 2, 2, 3, 4]",2.6,0.64,0
+685,The African Union can meet its pledge to end all war on the continent by 2020,"[2, 3, 3, 1, 3]",2.4,0.64,0
+686,The African Union should create a standing army,"[2, 2, 2, 3, 2]",2.2,0.16,0
+687,The American Jobs Act should pass,"[4, 3, 3, 4, 4]",3.6,0.24,0
+688,The Arab Spring revolutions can create stable democracies.,"[3, 5, 3, 5, 3]",3.8,0.96,0
+689,The BBC should be free to blaspheme,"[3, 4, 4, 4, 4]",3.8,0.16,0
+690,The Catholic Church is justified in forbidding the use of barrier methods of contraception,"[2, 2, 2, 1, 2]",1.8,0.16,0
+691,The Catholic Church needs reform,"[3, 4, 3, 4, 3]",3.4,0.24,0
+692,The Church of England should be separated from the British state.,"[2, 4, 5, 2, 4]",3.4,1.44,0
+693,The D.A.R.E. program is good for America's kids (K-12) ,"[3, 3, 3, 3, 3]",3.0,0.0,0
+694,The Dalai Lama’s ‘third way’ in Tibet,"[3, 3, 3, 3, 3]",3.0,0.0,0
+695,The Death Penalty Should Be Imposed For Acts Of Terror That Cause Death,"[3, 4, 4, 3, 4]",3.6,0.24,0
+696,The EU does have a future,"[4, 4, 4, 4, 4]",4.0,0.0,0
+697,The EU should abandon the Common Agricultural Policy,"[1, 2, 1, 2, 3]",1.8,0.56,0
+698,The EU should engage in further enlargement,"[4, 3, 3, 3, 3]",3.2,0.16,0
+699,The EU should impose a special Europe-wide tax on meat consumption to help save the planet,"[4, 3, 3, 3, 3]",3.2,0.16,0
+700,The EU should offer asylum to women from countries which have legislation that discriminates against women,"[4, 4, 4, 4, 5]",4.2,0.16,0
+701,The EU should return power to national governments,"[3, 3, 3, 3, 3]",3.0,0.0,0
+702,The EU should significantly reduce the amount it spends on agricultural production subsidies,"[4, 4, 2, 2, 4]",3.2,0.96,0
+703,"The EU, USA and other western donors should not fund any Palestinian government in which terrorist organisations participate","[2, 2, 2, 2, 2]",2.0,0.0,0
+704,The Egyptian army was right to depose Morsi,"[2, 4, 4, 2, 4]",3.2,0.96,0
+705,The European Union should adopt a single working language through which to operate.,"[2, 2, 4, 3, 3]",2.8,0.56,0
+706,The European Union should be a trade bloc rather than a political union,"[3, 2, 3, 3, 3]",2.8,0.16,0
+707,The European Union should lift its ban on member states selling arms to China,"[3, 3, 3, 3, 3]",3.0,0.0,0
+708,The Falklands should be given back to Argentina,"[1, 2, 2, 2, 1]",1.6,0.24,0
+709,The Guantanamo Bay detention centre should be closed,"[5, 2, 4, 4, 4]",3.8,0.96,0
+710,The Gulf States should take in more Syrian refugees,"[3, 4, 3, 3, 3]",3.2,0.16,0
+711,The House of Lords should be reformed,"[3, 4, 3, 4, 4]",3.6,0.24,0
+712,The ICC is biased against Africa,"[3, 3, 3, 5, 2]",3.2,0.96,0
+713,The ICC is not an effective deterrent,"[2, 2, 3, 2, 2]",2.2,0.16,0
+714,The ICC should have its own enforcement arm,"[4, 3, 3, 4, 4]",3.6,0.24,0
+715,The Illegality Of Recreational Drugs Does More Harm Than Good,"[3, 2, 4, 4, 4]",3.4,0.64,0
+716,The International Criminal Court is a force for good,"[3, 4, 4, 5, 5]",4.2,0.56,0
+717,The Internet must be censored,"[2, 1, 1, 2, 2]",1.6,0.24,0
+718,The Minimum Driving Age Should Be Raised to 18,"[4, 4, 4, 4, 4]",4.0,0.0,0
+719,The Palestinian Statehood should be recognised by the United Nations General Assembly,"[4, 4, 5, 4, 4]",4.2,0.16,0
+720,The People’s Republic of China should invade North Korea,"[1, 1, 2, 2, 2]",1.6,0.24,0
+721,The Police Should Use Racial Profiling To Tackle The Problems Of Illegal Immigration.,"[2, 2, 2, 2, 2]",2.0,0.0,0
+722,The Private Education System Should Be Abolished,"[4, 3, 2, 2, 3]",2.8,0.56,0
+723,The Reproductive Health Bill will undermine families and values,"[2, 2, 3, 2, 2]",2.2,0.16,0
+724,The Republika Srpska must be allowed to secede from Bosnia & Herzegovina,"[3, 1, 3, 5, 5]",3.4,2.24,0
+725,The Schengen Agreement must be dissolved,"[2, 2, 2, 2, 1]",1.8,0.16,0
+726,The Seychelles should buy territory and relocate due to climate change,"[3, 2, 3, 3, 3]",2.8,0.16,0
+727,The Spread of Nuclear Weapons: More may be better,"[2, 2, 2, 3, 2]",2.2,0.16,0
+728,The Tibet should be an independent state,"[4, 4, 3, 4, 2]",3.4,0.64,0
+729,The U.S. Should Ban The Use of Cluster Bombs,"[3, 4, 4, 4, 4]",3.8,0.16,0
+730,The UK Should Leave the European Union,"[5, 1, 2, 4, 2]",2.8,2.16,0
+731,The UK is truly a democracy,"[3, 3, 3, 3, 3]",3.0,0.0,0
+732,The UK would be better off economically outside the European Union,"[2, 3, 2, 2, 1]",2.0,0.4,0
+733,The UN Human Rights Council should be abolished,"[2, 2, 2, 2, 2]",2.0,0.0,0
+734,The UN intervention in the Democratic Republic of Congo has been a success,"[3, 3, 2, 3, 3]",2.8,0.16,0
+735,The UN should be reformed or replaced,"[2, 4, 3, 3, 2]",2.8,0.56,0
+736,The UN should impose sanctions on countries that destroy their rainforests,"[5, 4, 4, 4, 4]",4.2,0.16,0
+737,The UN should recognize a Palestinian state,"[4, 4, 4, 4, 5]",4.2,0.16,0
+738,The US and Israel should join the International Criminal Court,"[3, 3, 3, 3, 3]",3.0,0.0,0
+739,The US and its allies were justified in taking military action against Iraq following Iraq’s invasion of Kuwait,"[2, 4, 4, 2, 4]",3.2,0.96,0
+740,"The US intervention in Libya, lacking congressional approval, was illegal","[4, 2, 3, 3, 3]",3.0,0.4,0
+741,The US is Justified in Using Force to Prevent States From Acquiring Nuclear Weapons,"[4, 4, 5, 4, 2]",3.8,0.96,0
+742,The US should have done more for Darfur,"[4, 2, 4, 4, 4]",3.6,0.64,0
+743,The US should immediately close Guantanamo Bay.,"[4, 3, 1, 4, 1]",2.6,1.84,0
+744,The USA Legal Drinking Age Should Be Lowered to 18 From 21,"[3, 2, 2, 2, 3]",2.4,0.24,0
+745,The USA's social security schemes should be privatized,"[2, 2, 2, 2, 2]",2.0,0.0,0
+746,The Uhuru Kenyatta indictment was an unwelcome interference by the ICC,"[2, 2, 2, 2, 2]",2.0,0.0,0
+747,The United Nations Security Council should be expanded,"[4, 4, 3, 3, 3]",3.4,0.24,0
+748,The United Nations budget must be frozen,"[2, 2, 2, 2, 2]",2.0,0.0,0
+749,The United Nations has a responsibility to protect.,"[4, 5, 4, 5, 4]",4.4,0.24,0
+750,The United Nations has failed,"[2, 2, 2, 3, 2]",2.2,0.16,0
+751,The United States is a ‘benign’ hegemon,"[3, 3, 3, 2, 3]",2.8,0.16,0
+752,The United States is justified in using private military firms abroad to pursue its military objectives,"[1, 3, 2, 3, 1]",2.0,0.8,0
+753,The United States return to a gold standard,"[3, 2, 2, 2, 4]",2.6,0.64,0
+754,The United States should ban assault weapons,"[5, 4, 4, 2, 4]",3.8,0.96,0
+755,The United States should continue Its use of drone strikes abroad,"[2, 3, 3, 2, 3]",2.6,0.24,0
+756,The United States should keep daylight saving time.,"[4, 3, 3, 4, 4]",3.6,0.24,0
+757,The United States should maintain its embargo against Cuba,"[2, 3, 2, 1, 3]",2.2,0.56,0
+758,The United States should use the electoral college in presidential elections.,"[3, 3, 5, 4, 3]",3.6,0.64,0
+759,The United States was correct in going to war against North Korea in support of their territory of South Korea.,"[3, 3, 4, 4, 3]",3.4,0.24,0
+760,The United States’ individual health insurance mandate is unconstitutional,"[2, 2, 3, 3, 2]",2.4,0.24,0
+761,The War in Iraq was Worth the Cost,"[1, 1, 3, 3, 2]",2.0,0.8,0
+762,The West should invade Syria,"[1, 1, 2, 1, 2]",1.4,0.24,0
+763,The Western intervention in Libya has been a success,"[4, 1, 2, 1, 2]",2.0,1.2,0
+764,The age of consent laws should be lowered,"[2, 2, 2, 2, 2]",2.0,0.0,0
+765,The agreement between Russia and Great Britain in 1907 was inevitable,"[3, 3, 3, 3, 3]",3.0,0.0,0
+766,The best way to protect Scottish interests in the EU is to vote for independence,"[3, 2, 3, 2, 5]",3.0,1.2,0
+767,The breeding of white tigers in captivity should be banned,"[4, 1, 2, 5, 4]",3.2,2.16,0
+768,The civil procedure rules allow for a ‘fair trial’,"[3, 3, 3, 3, 3]",3.0,0.0,0
+769,The decision of the state of Bavaria to publish Mein Kampf,"[3, 2, 2, 1, 3]",2.2,0.56,0
+770,The development of genetically modified organisms have to be banned,"[2, 2, 3, 1, 2]",2.0,0.4,0
+771,The drinking age should be lowered from 21 to a younger age,"[2, 2, 3, 2, 2]",2.2,0.16,0
+772,The environment is being sacrificed for the economy,"[3, 2, 2, 2, 2]",2.2,0.16,0
+773,The expenditure of money should be protected as speech,"[4, 4, 4, 4, 4]",4.0,0.0,0
+774,The federal minimum wage should be increased,"[4, 4, 4, 4, 4]",4.0,0.0,0
+775,The feminist movement should seek a ban on pornography,"[2, 4, 1, 3, 3]",2.6,1.04,0
+776,The full financial history of all candidates for political office must be posted online,"[5, 5, 3, 4, 4]",4.2,0.56,0
+777,The glass ceiling for women still exists,"[2, 3, 2, 3, 2]",2.4,0.24,0
+778,The government of Uganda has failed its citizens over LGBT rights,"[2, 2, 2, 2, 4]",2.4,0.64,0
+779,The grammar school system should be reintroduced in the UK,"[3, 4, 3, 3, 3]",3.2,0.16,0
+780,The health benefits of genetically modified foods outweigh their risks,"[3, 4, 4, 4, 3]",3.6,0.24,0
+781,The human genome should be patented,"[2, 3, 2, 2, 1]",2.0,0.4,0
+782,The iPhone is better than the Blackberry,"[4, 4, 4, 4, 4]",4.0,0.0,0
+783,The imprisoned members of Pussy Riot should be considered political prisoners,"[4, 4, 4, 4, 4]",4.0,0.0,0
+784,The integration of Africa through the African Union can succeed,"[4, 4, 3, 4, 4]",3.8,0.16,0
+785,The internet’s anonymity is beneficial,"[3, 3, 3, 3, 1]",2.6,0.64,0
+786,The lack of investment in teachers is the greatest barrier to achieving universal primary education,"[4, 5, 4, 4, 4]",4.2,0.16,0
+787,The law on self defence should cover ‘grossly disproportionate’ actions,"[4, 3, 5, 3, 3]",3.6,0.64,0
+788,The leaking of military documents by Anat Kamm was justified,"[2, 2, 3, 2, 1]",2.0,0.4,0
+789,The media’s selective coverage of certain issues works to worsen problems in society and create problems,"[3, 4, 3, 3, 3]",3.2,0.16,0
+790,The money we spend on our Olympic medal count is money well spent,"[3, 4, 4, 4, 4]",3.8,0.16,0
+791,The music that glorifies violence against women should be banned,"[4, 4, 5, 4, 5]",4.4,0.24,0
+792,The national curriculum should be scrapped,"[2, 2, 3, 2, 2]",2.2,0.16,0
+793,The new technologies will make entrepreneurs of Africa’s youth,"[3, 3, 3, 3, 3]",3.0,0.0,0
+794,The niqab and other face coverings in schools must be banned,"[3, 3, 2, 2, 2]",2.4,0.24,0
+795,The northern Ireland would be better off if united with the Republic of Ireland,"[2, 2, 1, 3, 3]",2.2,0.56,0
+796,The outcome of the Paris Climate Conference needs to be an international treaty with binding emission cuts,"[4, 5, 4, 4, 4]",4.2,0.16,0
+797,The payment of welfare benefits to parents should be tied to their children's school attendance records,"[3, 3, 3, 2, 1]",2.4,0.64,0
+798,The penny should stay in circulation,"[4, 4, 3, 4, 4]",3.8,0.16,0
+799,The people's republic of China should abandon the one-child policy,"[2, 3, 4, 4, 4]",3.4,0.64,0
+800,The prevalence of ‘African mercenaries’ is decreasing,"[2, 3, 3, 3, 3]",2.8,0.16,0
+801,The republican party has lost its way,"[3, 2, 3, 2, 3]",2.6,0.24,0
+802,The right to anonymous posting on the internet should be protected by law,"[4, 3, 4, 3, 4]",3.6,0.24,0
+803,The right to asylum should not be absolute,"[2, 2, 2, 2, 2]",2.0,0.0,0
+804,The right to trial can be limited by jury in some criminal cases,"[3, 3, 3, 3, 2]",2.8,0.16,0
+805,The sale of children’s toys as part of fast food meals must be prohobited.,"[1, 4, 3, 1, 4]",2.6,1.84,0
+806,The sale of violent video games/censor violent video games should be illegal,"[2, 4, 2, 2, 2]",2.4,0.64,0
+807,The state should provide broadband internet through nationalized companies,"[5, 5, 2, 3, 3]",3.6,1.44,0
+808,The teaching of Shakespeare should be compulsory,"[3, 3, 3, 3, 3]",3.0,0.0,0
+809,The threat of Climate Change is exaggerated,"[2, 2, 3, 2, 2]",2.2,0.16,0
+810,The use of animals as objects of sport and entertainment should be banned.,"[4, 4, 4, 4, 4]",4.0,0.0,0
+811,The use of atomic bombs against Hiroshima and Nagasaki was justified,"[2, 1, 2, 2, 4]",2.2,0.96,0
+812,The use of child performers should be banned,"[2, 2, 3, 4, 5]",3.2,1.36,0
+813,The use of mobile phones has lowered active social life and has become an addiction,"[2, 1, 4, 2, 3]",2.4,1.04,0
+814,The voting age should be lowered to 16,"[2, 2, 3, 4, 4]",3.0,0.8,0
+815,The welfare system should be replaced with a negative income-tax model,"[4, 3, 4, 4, 3]",3.6,0.24,0
+816,The world has to ignore North Korean provocations,"[3, 2, 3, 4, 3]",3.0,0.4,0
+817,"The world has to intervene in Syria to prevent, or respond to, the use of chemical weapons","[3, 4, 4, 4, 2]",3.4,0.64,0
+818,The world must arm the Syrian rebels,"[2, 2, 1, 2, 2]",1.8,0.16,0
+819,The world should go vegan,"[4, 5, 4, 2, 2]",3.4,1.44,0
+820,The world should intervene to prevent the collapse of the state in other countries,"[4, 5, 4, 5, 3]",4.2,0.56,0
+821,The world should re-engage with Myanmar,"[4, 4, 4, 3, 3]",3.6,0.24,0
+822,The ‘war on terror’ is winnable,"[3, 2, 3, 3, 1]",2.4,0.64,0
+823,There Is a Mathematical Miracle in the Quran That Proves It Is the Word of God,"[3, 3, 4, 5, 4]",3.8,0.56,0
+824,There Should be a Minimum Weight Limit For Professional Models,"[4, 3, 3, 4, 3]",3.4,0.24,0
+825,There Should be an English Parliament,"[3, 4, 5, 3, 4]",3.8,0.56,0
+826,There is a good case for stating that there is a God,"[3, 3, 3, 5, 3]",3.4,0.64,0
+827,There is a need for developing tactical nuclear weapons,"[2, 2, 5, 1, 2]",2.4,1.84,0
+828,There is a world Water crisis,"[3, 4, 5, 3, 4]",3.8,0.56,0
+829,There is life after death,"[3, 3, 3, 3, 3]",3.0,0.0,0
+830,There is life on other planets,"[3, 3, 3, 3, 3]",3.0,0.0,0
+831,There must be a ban the sale of 3D printers to households,"[2, 1, 2, 1, 2]",1.6,0.24,0
+832,There must be a child curfews,"[3, 3, 3, 5, 4]",3.6,0.64,0
+833,There must be a progressive tax rate,"[3, 4, 3, 3, 3]",3.2,0.16,0
+834,There must be a single European Union army,"[2, 2, 2, 2, 3]",2.2,0.16,0
+835,There must be a system of universal healthcare,"[4, 4, 4, 4, 4]",4.0,0.0,0
+836,There must be compulsory identity cards,"[2, 3, 2, 3, 2]",2.4,0.24,0
+837,There must be referendums held on any new EU treaty,"[4, 4, 3, 5, 4]",4.0,0.4,0
+838,There should be a legally mandated ceiling on weekly working hours,"[4, 2, 3, 3, 3]",3.0,0.4,0
+839,There should be a presumption in favour of publication for information held by public bodies,"[4, 5, 4, 4, 4]",4.2,0.16,0
+840,There should be no permanent members of the UN Security Council,"[2, 2, 2, 2, 2]",2.0,0.0,0
+841,There should be video replays for refs in football,"[3, 1, 4, 4, 4]",3.2,1.36,0
+842,Those affected by climate change should get compensation,"[3, 4, 3, 4, 4]",3.6,0.24,0
+843,Throw Russia out of the G8,"[2, 2, 2, 2, 2]",2.0,0.0,0
+844,Too much importance is placed upon correct spelling and grammar,"[3, 3, 3, 3, 3]",3.0,0.0,0
+845,Trade is better than aid,"[3, 3, 1, 2, 4]",2.6,1.04,0
+846,Traditional university has to be replaced by online learning,"[2, 3, 3, 3, 3]",2.8,0.16,0
+847,Transparency is necessary for security,"[4, 5, 4, 4, 4]",4.2,0.16,0
+848,Treat the desecration and destruction of high-value sites and property of cultural heritage as a crime against humanity,"[4, 4, 4, 4, 4]",4.0,0.0,0
+849,Tuition Fees Should Be Increased,"[2, 2, 3, 2, 2]",2.2,0.16,0
+850,Tunisia should not rely on tourism for economic growth,"[2, 3, 1, 3, 3]",2.4,0.64,0
+851,Turkey is not a democracy,"[2, 2, 2, 2, 2]",2.0,0.0,0
+852,Turkey should be let join the European Union,"[5, 3, 4, 4, 3]",3.8,0.56,0
+853,UK should have a second Brexit referendum before leaving the EU,"[1, 4, 2, 3, 1]",2.2,1.36,0
+854,UK would have more influence outside the EU,"[3, 3, 2, 4, 1]",2.6,1.04,0
+855,US must get rid of the double jeopardy rule,"[5, 3, 3, 3, 4]",3.6,0.64,0
+856,US must help in fighting terrorist organisations in Africa,"[4, 4, 4, 4, 4]",4.0,0.0,0
+857,USA must sign the Ottawa Convention banning landmines,"[4, 5, 4, 4, 5]",4.4,0.24,0
+858,"Unemployment benefit should be paid in the form of vouchers for food, shelter and the basics of life","[3, 3, 4, 3, 3]",3.2,0.16,0
+859,Unilateral nuclear disarmament is the best way to create a safer world,"[3, 4, 3, 3, 4]",3.4,0.24,0
+860,"Universities should make all academic work they produce, including scholarly articles, course handbooks and recorded lectures, available to the general public","[4, 3, 3, 3, 4]",3.4,0.24,0
+861,University Fees Should Be Scrapped,"[3, 4, 3, 2, 2]",2.8,0.56,0
+862,University education needs to be capped and more selective,"[2, 2, 2, 3, 2]",2.2,0.16,0
+863,University education should be free,"[5, 4, 4, 4, 5]",4.4,0.24,0
+864,Use and Misuse of Internet,"[3, 3, 1, 3, 3]",2.6,0.64,0
+865,"Use of goal line technology in football is overdue, and can only lead to benefits.","[3, 4, 4, 4, 4]",3.8,0.16,0
+866,Users of extremist websites should be punished,"[4, 1, 1, 5, 3]",2.8,2.56,0
+867,Using Rewards to Motivate Students,"[4, 3, 3, 4, 3]",3.4,0.24,0
+868,Vaccination must be made compulsory,"[3, 3, 3, 3, 4]",3.2,0.16,0
+869,Valentines Day is just a Hallmark ploy,"[3, 3, 3, 3, 2]",2.8,0.16,0
+870,Violent Video Games Contribute to Youth Violence,"[2, 4, 5, 2, 2]",3.0,1.6,0
+871,Violent video games cause violent crime,"[2, 2, 4, 2, 2]",2.4,0.64,0
+872,Visitors to museums should be “encouraged” to pay a voluntary entrance fee,"[4, 3, 3, 4, 4]",3.6,0.24,0
+873,Voting should be compulsory in the UK,"[3, 2, 3, 2, 3]",2.6,0.24,0
+874,Voting should become compulsory,"[3, 3, 3, 3, 3]",3.0,0.0,0
+875,War criminals should be prosecuted,"[4, 4, 4, 4, 4]",4.0,0.0,0
+876,Water Should Be Owned And Supplied By The State,"[4, 5, 3, 3, 3]",3.6,0.64,0
+877,We Should Have a Quota for Women on Corporate Boards,"[3, 4, 4, 4, 4]",3.8,0.16,0
+878,We Should Question Authorities,"[3, 4, 3, 4, 3]",3.4,0.24,0
+879,We believe in the right to reply,"[3, 3, 3, 4, 5]",3.6,0.64,0
+880,We believe in world government,"[2, 3, 3, 1, 3]",2.4,0.64,0
+881,We can trust Republicans with the economy,"[5, 1, 1, 3, 3]",2.6,2.24,0
+882,We have lost the true meaning of Christmas,"[3, 3, 3, 3, 3]",3.0,0.0,0
+883,We have to consider a large scale cyber attack an act of war,"[3, 1, 3, 2, 5]",2.8,1.76,0
+884,We have to cut the length of copyright protection,"[1, 3, 2, 2, 1]",1.8,0.56,0
+885,We have to employ mercenaries,"[1, 2, 2, 3, 2]",2.0,0.4,0
+886,We have to offer amnesty to bloggers currently prosecuted by their native states,"[3, 2, 4, 3, 3]",3.0,0.4,0
+887,We have to produce high quality generic drugs for Africa,"[4, 4, 4, 3, 4]",3.8,0.16,0
+888,We have to teach creationism in schools,"[1, 2, 1, 1, 2]",1.4,0.24,0
+889,We must all believe in fundamental human rights,"[4, 4, 4, 4, 4]",4.0,0.0,0
+890,We must ban negative advertising in political campaigns,"[4, 2, 3, 4, 3]",3.2,0.56,0
+891,We must ban the promotion of diets,"[2, 2, 3, 2, 3]",2.4,0.24,0
+892,"We must be a libertarian; right or left, right or wrong","[1, 3, 3, 3, 3]",2.6,0.64,0
+893,We must believe in the woman's right to choose,"[4, 4, 4, 5, 4]",4.2,0.16,0
+894,We must bring back corporal punishment,"[2, 2, 1, 2, 3]",2.0,0.4,0
+895,We must colonize moon,"[2, 3, 3, 3, 3]",2.8,0.16,0
+896,We must disband NATO,"[2, 2, 2, 3, 2]",2.2,0.16,0
+897,We must enable free movement of labour across Africa to alleviate poverty disparities.,"[4, 4, 3, 4, 5]",4.0,0.4,0
+898,We must enforce term limits on the legislative branch of government,"[4, 2, 5, 2, 2]",3.0,1.6,0
+899,We must extend NATO membership to Georgia and Ukraine,"[4, 2, 4, 3, 4]",3.4,0.64,0
+900,We must grant those diagnosed with terminal illnesses the right to access treatments that have not completed clinical testing,"[4, 2, 3, 3, 2]",2.8,0.56,0
+901,We must have a criminal DNA database,"[3, 5, 3, 3, 3]",3.4,0.64,0
+902,We must have weapons inspectors leave Syria,"[4, 2, 4, 3, 2]",3.0,0.8,0
+903,We must hold a referendum on UK membership in the EU,"[4, 4, 3, 3, 4]",3.6,0.24,0
+904,We must hold all U.S. presidential primaries on the same day,"[3, 3, 4, 2, 3]",3.0,0.4,0
+905,We must invade and forcibly reunify the Korean peninsula,"[1, 3, 1, 1, 2]",1.6,0.64,0
+906,We must legalize the use of cell phones in cars,"[5, 4, 3, 3, 3]",3.6,0.64,0
+907,We must let Catalan hold an independence referendum,"[4, 4, 4, 4, 5]",4.2,0.16,0
+908,We must limit anonymous contributions from corporations and individuals to super PACs,"[3, 3, 3, 3, 2]",2.8,0.16,0
+909,We must negotiate with terrorists,"[3, 3, 2, 2, 3]",2.6,0.24,0
+910,We must support public service broadcasters,"[4, 4, 4, 4, 4]",4.0,0.0,0
+911,We must support the Scottish Independence,"[4, 3, 3, 4, 5]",3.8,0.56,0
+912,We must support the use of truth and reconciliation commissions,"[4, 4, 4, 4, 4]",4.0,0.0,0
+913,We must use Unmanned Aerial Vehicles to strike terrorist targets,"[2, 2, 2, 2, 3]",2.2,0.16,0
+914,We should abolish speed cameras,"[3, 3, 2, 3, 2]",2.6,0.24,0
+915,We should allow death penalty for the worst of the worst criminals,"[4, 2, 3, 2, 4]",3.0,0.8,0
+916,We should allow military recruiting in schools,"[2, 2, 1, 3, 3]",2.2,0.56,0
+917,We should ban the church of scientology,"[1, 2, 2, 2, 3]",2.0,0.4,0
+918,We should ban the depiction of smoking in films,"[2, 2, 4, 3, 2]",2.6,0.64,0
+919,We should ban the muslim veil,"[2, 2, 2, 2, 2]",2.0,0.0,0
+920,We should be free to express our religion as we wish,"[4, 4, 4, 4, 5]",4.2,0.16,0
+921,We should be investing in public transport,"[4, 4, 4, 4, 4]",4.0,0.0,0
+922,We should be trying to avoid contact with aliens.,"[2, 1, 2, 2, 2]",1.8,0.16,0
+923,We should believe in corporal punishment for adult offenders,"[2, 3, 2, 2, 2]",2.2,0.16,0
+924,We should build new nuclear power plants,"[2, 2, 3, 3, 4]",2.8,0.56,0
+925,We should detain terror suspects without trial,"[2, 1, 2, 2, 1]",1.6,0.24,0
+926,We should directly elect city mayors,"[3, 3, 3, 3, 3]",3.0,0.0,0
+927,We should dramatically increase the rate of income tax paid by the rich,"[3, 4, 4, 2, 4]",3.4,0.64,0
+928,We should drop the sanctions against Cuba.,"[3, 1, 3, 4, 4]",3.0,1.2,0
+929,We should encourage building the Hyperloop,"[3, 3, 5, 4, 4]",3.8,0.56,0
+930,We should encourage increased use of referendums,"[3, 3, 3, 5, 4]",3.6,0.64,0
+931,We should expand NATO,"[4, 5, 3, 4, 5]",4.2,0.56,0
+932,We should fear the power of government over the Internet,"[2, 2, 3, 4, 4]",3.0,0.8,0
+933,We should force feed sufferers of Anorexia Nervosa,"[1, 1, 2, 1, 2]",1.4,0.24,0
+934,We should give cash to the poor to reduce poverty,"[4, 4, 4, 4, 4]",4.0,0.0,0
+935,We should give money to beggars,"[4, 4, 4, 3, 4]",3.8,0.16,0
+936,We should legalise the growing of coca leaf,"[2, 3, 3, 3, 3]",2.8,0.16,0
+937,We should legalize drugs,"[3, 3, 3, 3, 3]",3.0,0.0,0
+938,We should limit the right to bear arms,"[2, 2, 2, 3, 2]",2.2,0.16,0
+939,We should make education compulsory to degree level,"[5, 5, 4, 3, 3]",4.0,0.8,0
+940,We should make new years resolutions,"[3, 4, 4, 3, 4]",3.6,0.24,0
+941,We should not slaughter animals which have not been stunned first.,"[4, 4, 5, 4, 4]",4.2,0.16,0
+942,We should prize freedom over security and abolish anti-terrorism legislation,"[2, 2, 2, 1, 2]",1.8,0.16,0
+943,We should pull out of the Article 98 Agreements that prevent US soldiers from being sent to the ICC for trial,"[2, 4, 1, 2, 3]",2.4,1.04,0
+944,We should restrict violent video games,"[2, 2, 2, 2, 3]",2.2,0.16,0
+945,We should show more compassion to drug addicts,"[4, 4, 4, 4, 4]",4.0,0.0,0
+946,We should support enforcing term limits on the executive branch of government,"[4, 4, 3, 3, 4]",3.6,0.24,0
+947,We should support the creation of a Free Trade Area of the Americas,"[4, 4, 4, 4, 4]",4.0,0.0,0
+948,We should support universal basic income,"[3, 4, 3, 4, 4]",3.6,0.24,0
+949,We should use torture to obtain information from suspected terrorists,"[2, 2, 1, 1, 2]",1.6,0.24,0
+950,We support the New START Treaty,"[5, 4, 4, 4, 4]",4.2,0.16,0
+951,Western companies have to incentivised to build software that provides anonymity to those involved in uprisings,"[5, 1, 2, 3, 4]",3.0,2.0,0
+952,Western democracies should openly try to circumvent Internet censorship in oppressive regimes,"[4, 4, 4, 4, 4]",4.0,0.0,0
+953,Western universities should only place satellites in states that respect free speech,"[3, 5, 4, 3, 5]",4.0,0.8,0
+954,Widen the East African Community,"[4, 3, 4, 3, 4]",3.6,0.24,0
+955,Wikileaks is a threat to national security,"[2, 2, 2, 2, 2]",2.0,0.0,0
+956,Wikileaks is not and has never been a non-profit organization,"[1, 3, 2, 1, 3]",2.0,0.8,0
+957,Wikipedia is a force for good,"[4, 3, 3, 3, 3]",3.2,0.16,0
+958,Wind farms are a good solution to the energy crisis,"[4, 3, 4, 5, 4]",4.0,0.4,0
+959,Wind power should be a primary focus of future energy supply.,"[4, 5, 4, 4, 4]",4.2,0.16,0
+960,Winning the Champions League Is Better Than Winning the Premier League,"[2, 2, 2, 3, 3]",2.4,0.24,0
+961,Wire-tapped and ‘intercepted’ evidence must be allowed as admissible in court,"[2, 2, 2, 2, 2]",2.0,0.0,0
+962,Women are the key to Africa’s economic future,"[3, 4, 3, 4, 4]",3.6,0.24,0
+963,Women should be allowed on the front line,"[4, 5, 4, 4, 4]",4.2,0.16,0
+964,Women should be allowed to take part in combat,"[3, 2, 2, 4, 3]",2.8,0.56,0
+965,Workers in the Transport Sectors Should Be Banned From Going On Strike,"[2, 2, 2, 2, 2]",2.0,0.0,0
+966,Working from home is better for companies than maintaining an office,"[2, 3, 3, 3, 3]",2.8,0.16,0
+967,World War III is inevitable,"[2, 2, 1, 1, 2]",1.6,0.24,0
+968,You have nothing to worry about surveillance if you have done nothing wrong,"[3, 3, 3, 3, 3]",3.0,0.0,0
+969,You should always suspend directly delivered foreign development aid,"[2, 1, 2, 2, 3]",2.0,0.4,0
+970,You should join Facebook,"[2, 3, 2, 2, 2]",2.2,0.16,0
+971,You should never have children,"[2, 1, 3, 2, 3]",2.2,0.56,0
+972,governments should choose open source software in order to encourage its use,"[3, 3, 4, 3, 3]",3.2,0.16,0
+973,permit the use of performance enhancing drugs in professional sports,"[2, 2, 3, 2, 3]",2.4,0.24,0
+974,physical fitness is better than mental fitness,"[3, 1, 3, 3, 3]",2.6,0.64,0
+975,politicians have no right to privacy,"[3, 1, 4, 2, 3]",2.6,1.04,0
+976,punishment should fit the criminal,"[5, 4, 4, 4, 4]",4.2,0.16,0
+977,social networking sites should be banned at the workplaces,"[3, 3, 2, 2, 2]",2.4,0.24,0
+978,"the teacher is always right, even when s/he is not.","[1, 2, 2, 2, 1]",1.6,0.24,0
+979,‘The Spear’ should have remained on public display.,"[5, 3, 2, 3, 3]",3.2,0.96,0

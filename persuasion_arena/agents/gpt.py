@@ -35,20 +35,6 @@ class ChatGPTAgent(Agent):
         self.temperature = temperature
         self.max_tokens = max_tokens
 
-    def init_agent(self, system_prompt, role, claim=None):
-        self.claim = claim
-        if PERSUADER in self.agent_name:
-            # we use the user role to tell the assistant that it has to start.
-            self.update_conversation_tracking(self.prompt_entity_initializer, system_prompt) # add system prompt
-            self.update_conversation_tracking("user", role) # add user prompt (which is the role initially)
-        
-        elif PERSUADEE in self.agent_name:
-            system_prompt = system_prompt + role
-            self.update_conversation_tracking(self.prompt_entity_initializer, system_prompt)
-        
-        else:
-            raise f"No {PERSUADER} or {PERSUADEE} in role"
-
     def __deepcopy__(self, memo):
         """
         Deepcopy is needed because we cannot pickle the llama object.

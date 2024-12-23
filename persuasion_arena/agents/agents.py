@@ -2,7 +2,9 @@ from abc import ABC, abstractmethod
 import copy
 from persuasion_arena.constants import *
 from copy import deepcopy
-from games.prompt import final_decision
+from games.old_game.prompt import final_decision
+from persuasion_arena.utils import advanced_parse, support_to_int
+from persuasion_arena.constants import *
 
 
 class Agent(ABC):
@@ -24,6 +26,7 @@ class Agent(ABC):
         self.model = None
         self.agent_name = agent_name
         self.claim = None
+        # self.turn = 0
 
         self.prompt_entity_initializer = None
 
@@ -55,20 +58,14 @@ class Agent(ABC):
                 else:
                     f.write(f'\t\t{text["role"]}: {c}' "\n\n")
 
-    def init_agent(self, system_prompt, role, claim=None):
-        # assign claim to agent
+    def init_agent(self, system_prompt, role="", claim=None):
+        
         self.claim = claim
+        self.update_conversation_tracking(self.prompt_entity_initializer, system_prompt + role)
 
-        # clear conversation
-        self.conversation = []
+        
 
-        system_prompt = system_prompt + role
-
-        self.update_conversation_tracking(
-            self.prompt_entity_initializer, system_prompt
-        )
-
-    def think(self):
+    def think(self, try_count=5, expected_keys=None, visible_ranks=False):
         """
         Think method calls the chat function and updates the history of the conversation.
         Next time the agents chats, it will use the updated history.
@@ -76,14 +73,30 @@ class Agent(ABC):
         :return:
         """
         # call agent / make agent think
-        response = self.chat()
+        response = None
+        while response is None and try_count > 0:
+            response = self.chat()
+            if expected_keys and response:
+                response = advanced_parse(response, expected_keys)
+            try_count -= 1
+
+        # format response into a string before adding to conversation history
+        response_str = ""
+        if response:
+            for k, v in response.items():
+                if k == RANKING_TAG and not visible_ranks:
+                    continue
+                if k == RANKING_TAG_INT:
+                    continue
+                response_str += f"<{k}> {v} </{k}>\n"
 
         # update agent history
-        self.update_conversation_tracking("assistant", response)
-
+        self.update_conversation_tracking("assistant", response_str)
+        
+        # self.turn += 1
         return response
 
-    def step(self, message):
+    def step(self, message, expected_keys=None, visible_ranks=False):
         """
         Make agent take a step in a ratbench:
 
@@ -96,7 +109,11 @@ class Agent(ABC):
         if message:
             self.update_conversation_tracking("user", message)
 
-        response = self.think()
+        response = self.think(expected_keys = expected_keys, visible_ranks=visible_ranks)
+
+        if response and RANKING_TAG in response:
+            ranking = support_to_int(response[RANKING_TAG])
+            response[RANKING_TAG_INT] = ranking
 
         return response
 
@@ -143,15 +160,26 @@ class Agent(ABC):
 
         return list(subclasses_set)
     
-    def final_decision(self, iteration, prev_message):
+    # def final_decision(self, iteration, prev_message):
         
-        final_decision_prompt = final_decision(self.claim)
+    #     final_decision_prompt = final_decision(self.claim)
 
-        if iteration % 2 == 1: # if it is the persuader's turn (last agent to speak was the persuadee, only give the final decision prompt)
-            final_decision_response = self.step(final_decision_prompt)
-            # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
-            return final_decision_response
+    #     if iteration % 2 == 1: # if it is the persuader's turn (last agent to speak was the persuadee, only give the final decision prompt)
+    #         final_decision_response = self.step(final_decision_prompt)
+    #         # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
+    #         return final_decision_response
+    #     else:
+    #         final_decision_response = self.step(prev_message + "\n" + final_decision_prompt)
+    #         # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
+    #         return final_decision_response
+
+    def copy_agent_conversation(self):
+        return deepcopy(self.conversation)
+        
+    def reset(self, full_reset=False):
+        if full_reset:
+            # only keep the system prompt in the conversation history
+            self.conversation = [self.conversation[0]]
         else:
-            final_decision_response = self.step(prev_message + "\n" + final_decision_prompt)
-            # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
-            return final_decision_response
+            # only remove the last user and assistant messages
+            self.conversation = self.conversation[:-2]

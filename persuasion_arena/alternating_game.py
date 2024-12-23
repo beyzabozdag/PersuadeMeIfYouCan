@@ -19,7 +19,7 @@ class AlternatingGame(Game):
         # list of dict for simplicity
         self.game_state = []
         self.iterations = iterations
-        self.current_iteration = 1
+        self.current_iteration = 0
         self.game_interface = None
         self.conversation = {}
 
@@ -46,6 +46,7 @@ class AlternatingGame(Game):
             agent_message = self.game_interface.parse(response)
         except Exception as e:
             print("response : {}".format(response))
+            print(f"Conversation failed. Error: {e}")
             raise e
 
         datum = dict(

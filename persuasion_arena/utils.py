@@ -1,6 +1,7 @@
 import os
 import copy
-from persuasion_arena.agents import ChatGPTAgent
+from persuasion_arena.constants import SUPPORT
+import regex as re
 
 
 def extract_multiple_tags(response, interest_tags):
@@ -20,14 +21,14 @@ def factory_agent(name, agent_name):
     :param agent_name:
     :return:
     """
-    if name == "gpt-4":
-        return ChatGPTAgent(agent_name=agent_name, model="gpt-4-1106-preview")
+    # if name == "gpt-4":
+    #     return ChatGPTAgent(agent_name=agent_name, model="gpt-4-1106-preview")
     # elif name == "claude-2":
     #     return ClaudeAgent(agent_name=agent_name, model="claude-2")
     # elif name == "claude-2.1":
     #     return ClaudeAgent(agent_name=agent_name, model="claude-2.1")
-    elif name == "gpt-3.5":
-        return ChatGPTAgent(agent_name=agent_name, model="gpt-3.5-turbo-1106")
+    # elif name == "gpt-3.5":
+    #     return ChatGPTAgent(agent_name=agent_name, model="gpt-3.5-turbo-1106")
 
 
 def get_tag_contents(response, interest_tag):
@@ -75,3 +76,30 @@ def get_next_filename(prefix, folder="."):
     next_filename = f"{prefix}{next_number}"
 
     return next_filename
+
+def support_to_int(support):
+    support = support.strip().lower()
+    # using regex match each string to a number
+    for key, value in SUPPORT.items():
+        if re.match(key, support):
+            return value
+    
+    return None
+
+def advanced_parse(response, expected_keys):
+    retval = {}
+    for key in expected_keys:
+        # Create a regex to match <key>value</key> or <key>value
+        pattern = fr"<{key}>(.*?)</{key}>|<{key}>(.*)"
+        match = re.search(pattern, response, re.DOTALL)
+        
+        if match:
+            # Use group 1 if the closing tag exists, otherwise use group 2
+            value = match.group(1) or match.group(2).split("<")[0]
+            retval[key] = value.strip()  # Remove leading/trailing whitespace
+    
+    if len(retval) == 0:
+        return None
+    
+    return retval
+
