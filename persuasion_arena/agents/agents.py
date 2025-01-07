@@ -3,7 +3,7 @@ import copy
 from persuasion_arena.constants import *
 from copy import deepcopy
 from games.old_game.prompt import final_decision
-from persuasion_arena.utils import advanced_parse, support_to_int
+from persuasion_arena.utils import advanced_parse, support_to_int, get_response_str
 from persuasion_arena.constants import *
 
 
@@ -59,11 +59,11 @@ class Agent(ABC):
                     f.write(f'\t\t{text["role"]}: {c}' "\n\n")
 
     def init_agent(self, system_prompt, role="", claim=None):
-        
         self.claim = claim
         self.update_conversation_tracking(self.prompt_entity_initializer, system_prompt + role)
 
-        
+    def resume_conversation(self, conversation_history):
+        self.conversation = conversation_history
 
     def think(self, try_count=5, expected_keys=None, visible_ranks=False):
         """
@@ -81,14 +81,7 @@ class Agent(ABC):
             try_count -= 1
 
         # format response into a string before adding to conversation history
-        response_str = ""
-        if response:
-            for k, v in response.items():
-                if k == RANKING_TAG and not visible_ranks:
-                    continue
-                if k == RANKING_TAG_INT:
-                    continue
-                response_str += f"<{k}> {v} </{k}>\n"
+        response_str = get_response_str(response, visible_ranks=visible_ranks)
 
         # update agent history
         self.update_conversation_tracking("assistant", response_str)
@@ -115,6 +108,14 @@ class Agent(ABC):
             ranking = support_to_int(response[RANKING_TAG])
             response[RANKING_TAG_INT] = ranking
 
+        # for expected_key in expected_keys:
+        #     if expected_key not in response:
+        #         response[expected_key] = None
+
+        # print("\n\n##DEBUG###")
+        # print(f"Agent {self.agent_name}")
+        # print(f"Response: {response}")
+        # print("##DEBUG###\n\n")
         return response
 
     def get_state(self):

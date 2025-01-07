@@ -33,19 +33,22 @@ class PersuasionGameDefaultParser(GameParser):
     def parse(self, response):
         ms = PersuasionAgentMessage()
         
-        if MESSAGE_TAG in response:
+        try:
             ms.add_public(MESSAGE_TAG, response[MESSAGE_TAG])
-
-        if RANKING_TAG in response:
-            ms.add_secret(RANKING_TAG, response[RANKING_TAG])
+            ms.add_secret(RANKING_TAG, response[RANKING_TAG])  
+        except Exception as e:
+            print(f"Conversation failed. Error: {e}")
+            raise e
 
         return ms
+        
 
 class PersuasionGame(AlternatingGame):
 
     def __init__(self, 
                  players: List,
-                 claims: List[str], 
+                 claims: List[str],
+                 belief_file: str,
                  question: str = None,
                  iterations: int = 2, 
                  log_dir: str = ".logs", 
@@ -66,6 +69,7 @@ class PersuasionGame(AlternatingGame):
         self.visible_ranks = visible_ranks
         self.test = test
         self.player_roles = player_roles
+        self.belief_file = belief_file
 
         # set the game interface
         self.game_interface = PersuasionGameDefaultParser()
@@ -133,23 +137,28 @@ class PersuasionGame(AlternatingGame):
         # if in test mode, do not save or attempt to retrieve the persuadee's initial ranking
         if not self.test:
             # check the model_beliefs.json file for the persuadee's initial ranking
-            with open("../games/new_game/model_beliefs.json", "r") as f:
+            with open(self.belief_file, "r") as f:
                 data = json.load(f)
                 if model_name in data and persuadee_claim in data[model_name]:
+                    print("Retrieving persuadee's initial ranking from model_beliefs.json")
                     response = data[model_name][persuadee_claim]
+                    response_str = get_response_str(response, visible_ranks=self.visible_ranks)
+
+                    # update agent history
                     persuadee.update_conversation_tracking("user", message_to_agent)
+                    persuadee.update_conversation_tracking("assistant", response_str)
 
         if response is None:
             response = self.players[1].step(message_to_agent, expected_keys=[MESSAGE_TAG, RANKING_TAG], visible_ranks=self.visible_ranks)
 
             if not self.test:
                 # save the persuadee's initial ranking to the model_beliefs.json file
-                with open("../games/new_game/model_beliefs.json", "r") as f:
+                with open(self.belief_file, "r") as f:
                     data = json.load(f)
                     if model_name not in data:
                         data[model_name] = {}
                     data[model_name][persuadee_claim] = response
-                    with open("../games/new_game/model_beliefs.json", "w") as f:
+                    with open(self.belief_file, "w") as f:
                         json.dump(data, f, indent=4)
 
         return response

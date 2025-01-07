@@ -1,6 +1,6 @@
 import os
 import copy
-from persuasion_arena.constants import SUPPORT
+from persuasion_arena.constants import *
 import regex as re
 
 
@@ -103,3 +103,15 @@ def advanced_parse(response, expected_keys):
     
     return retval
 
+
+def get_response_str(response, visible_ranks=True):
+    response_str = ""
+    if response:
+        for k, v in response.items():
+            if k == RANKING_TAG and not visible_ranks:
+                continue
+            if k == RANKING_TAG_INT:
+                continue
+            response_str += f"<{k}> {v} </{k}>\n"
+
+    return response_str

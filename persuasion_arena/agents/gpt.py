@@ -51,8 +51,6 @@ class ChatGPTAgent(Agent):
         return result
 
     def chat(self):
-        # return f"<{MESSAGE_TAG}> {self.agent_name} DUMMY RESPONSE </{MESSAGE_TAG}>"
-    
         chat = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,

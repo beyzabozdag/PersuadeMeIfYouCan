@@ -52,17 +52,14 @@ class LLamaChatAgent(Agent):
         return result
 
     def chat(self):
-        # if self.turn == 0:
-        #     return f"<message> {self.agent_name} DUMMY RESPONSE </message><support_ranking> {self.agent_name} DUMMY SUPPORT RANKING </support_ranking>"
-            
-        # else:
-        #     return f"<message> {self.agent_name} DUMMY RESPONSE </message><support_ranking> support </support_ranking>"
         chat_completion = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,
             temperature=0.7,
+            max_tokens=self.max_tokens,
+            seed=self.seed,
         )
-    
+        
         return chat_completion.choices[0].message.content
         
     def update_conversation_tracking(self, role, message):
