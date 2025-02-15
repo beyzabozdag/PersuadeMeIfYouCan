@@ -73,7 +73,7 @@ def get_claims(anthropic_only=False):
         return sorted(list(unique_claims))
 
     # add claims from "subjective_claims.csv"
-    subjective_claims = pd.read_csv("persuasionArena/pre_assesment/perspectrum_claims.csv")
+    subjective_claims = pd.read_csv("PersuadeMeIfYouCan/pre_assesment/perspectrum_claims.csv")
     subj = set()
     for claim in subjective_claims["Claim"]:
         subj.add(claim)
