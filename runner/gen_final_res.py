@@ -13,6 +13,7 @@ from persuasion_arena.agents import *
 from persuasion_arena.constants import *
 from games.new_game.prompt import persuadee_final_decision_prompt
 from persuasion_arena.utils import get_response_str
+from runner.run_new_game import get_claims
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -55,16 +56,31 @@ def replace_persuader_message(claim):
 
     return f"<{OTHER_AGENT_MESSAGE_TAG}> {replacement} </{OTHER_AGENT_MESSAGE_TAG}>"
 
+
 def gen_final_res():
     
     results_file = f"{dir}/{dir_name}/results.json"
     new_results_file = f"{log_dir}/{dir_name}/results.json"
+
     new_results = []
+
+    if os.path.exists(new_results_file):
+        print("Results already exist")
+        new_results = json.load(open(new_results_file, "r"))
+
+    existing_results = [res["i"] for res in new_results]
+    
     skipped = []
+
+    # claims = get_claims(anthropic_only=True)
 
     with open(results_file, "r") as f:
         results = json.load(f)
         for res in results:
+            if res["i"] in existing_results:
+                continue
+            # if res["claim"] not in claims:
+            #     continue
             print()
             print(res["i"], res["claim"])
             a2 = get_agent()
@@ -76,6 +92,7 @@ def gen_final_res():
                 conversation_history = res["conversation"]["2"]["agent_history"][:-1]
                 # edit the last user message to ask the final decision prompt
                 last_user_message = conversation_history[-1]["content"]
+                
 
                 if replace:
                     last_user_message = replace_persuader_message(res["claim"]) + " " + persuadee_final_decision_prompt(res["claim"])
@@ -83,7 +100,7 @@ def gen_final_res():
                 else:
                     # split from the "Reminder: " part, and add the final decision prompt
                     last_user_message = last_user_message.split("Reminder: ")[0] + " " + persuadee_final_decision_prompt(res["claim"])
-                
+
                 # update the conversation history
                 conversation_history[-1]["content"] = last_user_message
 
@@ -102,16 +119,17 @@ def gen_final_res():
                 updated_conversation["2"]["agent_history"][-1]["content"] = get_response_str(response, visible_ranks=True)
 
             except Exception as e:
+                print("Exception occurred")
                 print(e)
                 skipped.append((res["i"], res["claim"]))
                 continue
 
             data = {
                 "i": res["i"],
-                "model1": res["model1"],
+                "model1": model1,
                 "model2": res["model2"],
                 "claim": res["claim"],
-                "conversation": updated_conversation
+                "conversation":updated_conversation
             }
 
             new_results.append(data)
@@ -122,7 +140,7 @@ def gen_final_res():
     with open(new_results_file, "w") as f:
         json.dump(new_results, f, indent=4) 
 
-    with open(f"{log_dir}/{dir_name}/skipped_claims.txt", "w") as f:
+    with open(f"{log_dir}/{dir_name}/skipped_claims.txt", "a") as f:
         for claim in skipped:
             f.write(f"{claim}\n")
 
@@ -134,6 +152,7 @@ if __name__ == "__main__":
     model1 = args.model1
     model2 = args.model2
     model2_path = args.model2_path
+    # fake_dir_name = "llama70b_llama70b"
     dir_name = args.dir_name
     log_dir = args.log_dir
     replace = args.replace

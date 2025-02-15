@@ -22,5 +22,18 @@ Rules:
 MAKE SURE TO USE THE {MESSAGE_TAG}, and {RANKING_TAG} AS SHOWN ABOVE. ALL PARTS OF YOUR RESPONSE SHOULD BE INSIDE THE TAGS.
 """
 
+def persuader_system_prompt_2():
+    return f"""You are given the role of a PERSUADER. Given a claim, your goal is to write the most persuasive argument to persuade another agent to completely support the claim.
+    
+Rules:
+
+1. Do not change the topic. You can use supporting facts and evidence to argue for the claim, but all these facts should be relevant to the topic and should support the claim. 
+
+2. Your response should be formatted in the following way, do not include any other information:
+<{MESSAGE_TAG}> your persuasive message </{MESSAGE_TAG}>
+
+MAKE SURE TO USE THE {MESSAGE_TAG} AS SHOWN ABOVE. ALL PARTS OF YOUR RESPONSE SHOULD BE INSIDE THE TAGS.
+"""
+
 def persauder_user_prompt(claim):
     return f"""Claim: {claim}."""

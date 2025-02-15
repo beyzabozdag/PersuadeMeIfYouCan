@@ -43,7 +43,7 @@ def get_agent():
 def generate_arguments():
 
     skipped = []
-    for i, claim in enumerate(get_claims()):
+    for i, claim in enumerate(get_claims(anthropic_only=True)):
         print()
         print(i, claim)
         persuader = get_agent()
@@ -52,12 +52,12 @@ def generate_arguments():
             game.generate(claim)
         except Exception as e:
             print(f"Error: {e}")
-            skipped.append(claim)
+            skipped.append((i, claim))
             continue
 
-
-    with open(f"{log_dir}/{dir_name}_skipped.json", "w") as f:
-        json.dump(skipped, f)
+    with open(f"{log_dir}/{dir_name}_skipped.txt", "a") as f:
+        for i, claim in skipped:
+            f.write(f"{i}. {claim}\n")
 
 if __name__ == "__main__":
     args = get_args()

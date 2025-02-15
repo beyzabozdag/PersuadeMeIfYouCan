@@ -106,7 +106,7 @@ def advanced_parse(response, expected_keys):
 
 def get_response_str(response, visible_ranks=True):
     response_str = ""
-    if response:
+    if response and isinstance(response, dict):
         for k, v in response.items():
             if k == RANKING_TAG and not visible_ranks:
                 continue

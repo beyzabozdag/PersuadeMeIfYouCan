@@ -33,6 +33,8 @@ disable_progress_bar()
 
 def get_args():
     parser = argparse.ArgumentParser()
+    # required number of iterations
+    parser.add_argument("--iterations", type=int, required=True, help="Number of iterations")
     # required model1 name
     parser.add_argument("--model1", type=str, required=True, help="Model name of the first agent")
     # required model2 name
@@ -56,7 +58,7 @@ def get_args():
 
 
 @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
-def get_claims():
+def get_claims(anthropic_only=False):
     dataset = load_dataset("Anthropic/persuasion", split="train")
     # get all claims from the dataset
     unique_claims = set([item["claim"] for item in dataset])
@@ -64,6 +66,9 @@ def get_claims():
     # filter out control claims
     control_claims = set([item["claim"] for item in dataset if item["source"] == "Control"])
     unique_claims = unique_claims - control_claims
+
+    if anthropic_only:
+        return sorted(list(unique_claims))
 
     # add claims from "subjective_claims.csv"
     subjective_claims = pd.read_csv("/home/nbozdag2/persuasionArena/pre_assesment/subjective_claims.csv")
@@ -136,7 +141,7 @@ def main():
 
     skipped = []
 
-    START_INDEX = 0
+    START_INDEX = 930
 
     for i, claim in enumerate(get_claims()[START_INDEX:]):
         a1, a2 = get_agents()
@@ -149,7 +154,7 @@ def main():
         game = PersuasionGame(
             players=[a1, a2],
             claims= [claim, claim],
-            iterations=7,
+            iterations=iterations,
             log_dir= f"{log_dir}/{dir_name}/.logs",
             end_game=end_game,
             visible_ranks=visible_ranks,
@@ -189,6 +194,8 @@ def main():
 
 if __name__ == "__main__":
     args = get_args()
+
+    iterations = args.iterations
 
     model1 = args.model1
     model1_path = args.model1_path
