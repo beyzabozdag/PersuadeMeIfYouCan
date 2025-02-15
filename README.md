@@ -76,7 +76,3 @@ You can run the simulation in two ways:
    ```bash
    python3 runner/run_subj_game.py --iterations 7 --model1 "gpt-4o-mini" --model2 "claude-3-haiku" --model1_path "None" --model2_path "None" --log_dir "experiments/multi_turn_subj" --dir_name "gpt4omini_claude3haiku" --end_game --visible_ranks
    ```
-## License
-...
-
-
