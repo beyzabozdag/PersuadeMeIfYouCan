@@ -65,11 +65,11 @@ $CMD
 You can run the simulation in two ways:
 1. Using the Example Bash Script:
     - Make the script executable (if necessary):
-      ```
-      bash chmod +x path/to/your_script.sh
+      ```bash
+      chmod +x path/to/your_script.sh
       ```
     - Execute the script:
-      ```
+      ```bash
       ./path/to/your_script.sh
       ```
 2. Directly via Command Line:
