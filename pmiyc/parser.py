@@ -1,7 +1,7 @@
 import copy
 from abc import ABC, abstractmethod
-from persuasion_arena.utils import *
-from persuasion_arena.constants import *
+from pmiyc.utils import *
+from pmiyc.constants import *
 
 
 class GameParser(ABC):

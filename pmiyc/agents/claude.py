@@ -1,6 +1,6 @@
 import os
 from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
-from persuasion_arena.agents.agents import Agent
+from pmiyc.agents.agents import Agent
 import time
 from copy import copy, deepcopy
 
@@ -74,18 +74,6 @@ class ClaudeAgent(Agent):
         return prompt + f"\n\n{self.role_to_prompt['assistant']}"
 
     def chat(self):
-        # t = self.messages_to_prompt(self.conversation)
-
-        # completion = self.anthropic.completions.create(
-        #     model=self.model,
-        #     max_tokens_to_sample=400,
-        #     temperature=0.7,
-        #     prompt=t,
-        # )
-        # time.sleep(0.2)
-        # return completion.completion
-
-        # take out the system prompt
         system_prompt = self.conversation[0]["content"]
 
         response = self.anthropic.messages.create(
@@ -95,7 +83,6 @@ class ClaudeAgent(Agent):
             system=system_prompt,
             messages=self.conversation[1:]
         )
-        # time.sleep(0.2)
         return response.content[0].text
 
 

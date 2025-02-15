@@ -1,6 +1,6 @@
 import json
-from persuasion_arena.agents.agents import Agent
-from persuasion_arena.parser import GameParser
+from pmiyc.agents.agents import Agent
+from pmiyc.parser import GameParser
 
 
 class GameDecoder(json.JSONDecoder):

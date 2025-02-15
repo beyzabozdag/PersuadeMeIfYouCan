@@ -1,10 +1,9 @@
 from abc import ABC, abstractmethod
 import copy
-from persuasion_arena.constants import *
+from pmiyc.constants import *
 from copy import deepcopy
-from games.old_game.prompt import final_decision
-from persuasion_arena.utils import advanced_parse, support_to_int, get_response_str
-from persuasion_arena.constants import *
+from pmiyc.utils import advanced_parse, support_to_int, get_response_str
+from pmiyc.constants import *
 
 
 class Agent(ABC):
@@ -82,11 +81,9 @@ class Agent(ABC):
 
         # format response into a string before adding to conversation history
         response_str = get_response_str(response, visible_ranks=visible_ranks)
-
         # update agent history
         self.update_conversation_tracking("assistant", response_str)
         
-        # self.turn += 1
         return response
 
     def step(self, message, expected_keys=None, visible_ranks=False):
@@ -108,14 +105,6 @@ class Agent(ABC):
             ranking = support_to_int(response[RANKING_TAG])
             response[RANKING_TAG_INT] = ranking
 
-        # for expected_key in expected_keys:
-        #     if expected_key not in response:
-        #         response[expected_key] = None
-
-        # print("\n\n##DEBUG###")
-        # print(f"Agent {self.agent_name}")
-        # print(f"Response: {response}")
-        # print("##DEBUG###\n\n")
         return response
 
     def get_state(self):
@@ -160,19 +149,6 @@ class Agent(ABC):
             subclasses_set.update(subclass.get_all_subclasses())
 
         return list(subclasses_set)
-    
-    # def final_decision(self, iteration, prev_message):
-        
-    #     final_decision_prompt = final_decision(self.claim)
-
-    #     if iteration % 2 == 1: # if it is the persuader's turn (last agent to speak was the persuadee, only give the final decision prompt)
-    #         final_decision_response = self.step(final_decision_prompt)
-    #         # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
-    #         return final_decision_response
-    #     else:
-    #         final_decision_response = self.step(prev_message + "\n" + final_decision_prompt)
-    #         # print(f"Agent {self.agent_name} final decision: {final_decision_response}")
-    #         return final_decision_response
 
     def copy_agent_conversation(self):
         return deepcopy(self.conversation)

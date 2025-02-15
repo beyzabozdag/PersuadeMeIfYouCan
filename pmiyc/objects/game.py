@@ -6,9 +6,9 @@ import inspect
 from pathlib import Path
 from typing import List
 from abc import ABC, abstractmethod
-from persuasion_arena.logging import GameEncoder
-from persuasion_arena.parser import GameParser
-from persuasion_arena.agents.agents import Agent
+from pmiyc.logging import GameEncoder
+from pmiyc.parser import GameParser
+from pmiyc.agents.agents import Agent
 
 class Game(ABC):
     """

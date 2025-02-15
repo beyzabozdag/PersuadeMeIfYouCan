@@ -4,14 +4,14 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import argparse
-from persuasion_arena.agents import LLamaChatAgent, ChatGPTAgent, ClaudeAgent
-from persuasion_arena.constants import PERSUADEE, RANKING_TAG
+from pmiyc.agents import LLamaChatAgent, ChatGPTAgent, ClaudeAgent
+from pmiyc.constants import PERSUADEE, RANKING_TAG
 from prompt import pre_asess_system_prompt
 from datasets import load_dataset
 from tenacity import retry, stop_after_attempt, wait_fixed
 import regex as re
-from persuasion_arena.utils import support_to_int
-from runner.run_new_game import get_claims
+from pmiyc.utils import support_to_int
+from runner.run_subj_game import get_claims
 import pandas as pd
 
 

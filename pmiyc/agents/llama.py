@@ -2,9 +2,9 @@ import copy
 import openai
 import os
 import random
-from persuasion_arena.agents.agents import Agent
+from pmiyc.agents.agents import Agent
 import time
-from persuasion_arena.constants import PERSUADER, PERSUADEE
+from pmiyc.constants import PERSUADER, PERSUADEE
 from copy import deepcopy
 
 
@@ -12,7 +12,7 @@ from copy import deepcopy
 class LLamaChatAgent(Agent):
     def __init__(
         self,
-        model="meta-llama/Llama-3.2-3B-Instruct", # TODO: Change model name 
+        model="meta-llama/Llama-3.2-3B-Instruct", 
         temperature=0.7,
         max_tokens=400,
         seed=None,

@@ -5,9 +5,9 @@ import inspect
 from pathlib import Path
 from typing import List
 from abc import ABC, abstractmethod
-from persuasion_arena.objects.game import Game
-from persuasion_arena.agents.agents import Agent
-from persuasion_arena.utils import get_next_filename
+from pmiyc.objects.game import Game
+from pmiyc.agents.agents import Agent
+from pmiyc.utils import get_next_filename
 
 
 class AlternatingGame(Game):

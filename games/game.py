@@ -1,9 +1,9 @@
-from persuasion_arena.alternating_game import AlternatingGame
-from persuasion_arena.parser import GameParser
-from persuasion_arena.constants import *
-from persuasion_arena.utils import *
-from persuasion_arena.agent_message import AgentMessage
-from games.new_game.prompt import *
+from pmiyc.alternating_game import AlternatingGame
+from pmiyc.parser import GameParser
+from pmiyc.constants import *
+from pmiyc.utils import *
+from pmiyc.agent_message import AgentMessage
+from games.prompt import *
 from typing import List
 
 import json

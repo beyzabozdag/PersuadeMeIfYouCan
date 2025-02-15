@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from persuasion_arena.utils import from_name_and_tag_to_message
+from pmiyc.utils import from_name_and_tag_to_message
 
 
 class AgentMessage:

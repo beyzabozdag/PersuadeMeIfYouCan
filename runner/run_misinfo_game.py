@@ -9,16 +9,16 @@ import inspect
 import random
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-from persuasion_arena.agents import *
-from games.new_game.game import PersuasionGame
-from persuasion_arena.constants import *
+from pmiyc.agents import *
+from games.game import PersuasionGame, MisinformationGame
+from pmiyc.constants import *
 from datasets import load_dataset
 
 import random
 from datasets import load_dataset
 from datasets.utils.logging import set_verbosity_error, disable_progress_bar
 
-from persuasion_arena.utils import get_tag_contents
+from pmiyc.utils import get_tag_contents
 from evaluator.evaluate import evaluate
 
 import json
@@ -33,8 +33,6 @@ disable_progress_bar()
 
 def get_args():
     parser = argparse.ArgumentParser()
-    # required number of iterations
-    parser.add_argument("--iterations", type=int, required=True, help="Number of iterations")
     # required model1 name
     parser.add_argument("--model1", type=str, required=True, help="Model name of the first agent")
     # required model2 name
@@ -44,9 +42,11 @@ def get_args():
     # required model 2 path
     parser.add_argument("--model2_path", type=str, required=True, help="Model path of the second agent")
     # results/log directory
-    parser.add_argument("--log_dir", type=str, default="/shared/storage-01/users/nbozdag2/multi_turn/experiments", help="Log directory")
+    parser.add_argument("--log_dir", type=str, default="/shared/storage-01/users/mehri2/Persuasion/PersuasionArena/logs/misinformation", help="Log directory")
     # results/log subdirectory name
     parser.add_argument("--dir_name", type=str, default="model1_model2", help="Subdirectory name")
+    # belief dir
+    parser.add_argument("--belief_dir", type=str, default="./initial_beliefs", help="Initial beliefs directory")
     # end game flag
     parser.add_argument("--end_game", action="store_true", help="End game flag")
     # visible ranks flag
@@ -58,25 +58,10 @@ def get_args():
 
 
 @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
-def get_claims(anthropic_only=False):
-    dataset = load_dataset("Anthropic/persuasion", split="train")
-    # get all claims from the dataset
-    unique_claims = set([item["claim"] for item in dataset])
+def get_claims():
+    dataset = load_dataset("truthfulqa/truthful_qa", "generation")["validation"]
 
-    # filter out control claims
-    control_claims = set([item["claim"] for item in dataset if item["source"] == "Control"])
-    unique_claims = unique_claims - control_claims
-
-    if anthropic_only:
-        return sorted(list(unique_claims))
-
-    # add claims from "subjective_claims.csv"
-    subjective_claims = pd.read_csv("/home/nbozdag2/persuasionArena/pre_assesment/subjective_claims.csv")
-    subj = set()
-    for claim in subjective_claims["Claim"]:
-        subj.add(claim)
-    
-    retval = sorted(list(unique_claims)) + sorted(list(subj))
+    retval = [{"question": elem["question"], "claim": random.choice(elem["incorrect_answers"])} for elem in dataset]
 
     print(f"Number of claims: {len(retval)}")
     print()
@@ -141,20 +126,21 @@ def main():
 
     skipped = []
 
-    START_INDEX = 930
+    START_INDEX = 0
 
-    for i, claim in enumerate(get_claims()[START_INDEX:]):
+    for i, elem in enumerate(get_claims()[START_INDEX:]):
         a1, a2 = get_agents()
         print("\n\n", "-"*50)
 
         j = i + START_INDEX
         
-        print(f"{j}: {claim}")
+        print(f"{j}: {elem}")
 
-        game = PersuasionGame(
+        game = MisinformationGame(
             players=[a1, a2],
-            claims= [claim, claim],
-            iterations=iterations,
+            question=elem["question"],
+            claim= elem["claim"],
+            iterations=7,
             log_dir= f"{log_dir}/{dir_name}/.logs",
             end_game=end_game,
             visible_ranks=visible_ranks,
@@ -174,7 +160,8 @@ def main():
             "i": j,
             "model1": model1,
             "model2": model2,
-            "claim": claim,
+            "questoin": elem["question"],
+            "claim": elem["claim"],
             "conversation": conversation,
             "conversation_str": conv_to_str(conversation)
         }
@@ -186,16 +173,13 @@ def main():
             json.dump(results, f, indent=4)
 
     # write the skipped claims to a file
-    with open(f"{log_dir}/{dir_name}/skipped_claims2.txt", "w") as f:
+    with open(f"{log_dir}/{dir_name}/skipped_claims.txt", "w") as f:
         for claim in skipped:
             f.write(f"{claim}\n")
 
 
-
 if __name__ == "__main__":
     args = get_args()
-
-    iterations = args.iterations
 
     model1 = args.model1
     model1_path = args.model1_path
@@ -203,7 +187,6 @@ if __name__ == "__main__":
     model2 = args.model2
     model2_path = args.model2_path
     
-    # vr = visible ranks, 3t = persuder gets 3 turns, i = informed persuader
     log_dir = args.log_dir
     dir_name = args.dir_name
 
@@ -211,19 +194,12 @@ if __name__ == "__main__":
     visible_ranks = args.visible_ranks
     test = args.test
 
-    belief_file = f"/shared/storage-01/users/nbozdag2/initial_beliefs/{dir_name.split('_')[1]}.json"
+    belief_file = f"{args.belief_dir}/{dir_name.split('_')[1]}.json"
 
     # check if beliefs file exists, if not create empty json file
     if not os.path.exists(belief_file):
         print(f"Creating empty belief file: {belief_file}")
         with open(belief_file, "w") as f:
             json.dump({}, f, indent=4)
-
-    # # print all arguments
-    # print("\n\n", "-"*50)
-    # print("Arguments:")
-    # for arg in vars(args):
-    #     print(f"{arg}: {getattr(args, arg)}")
-    # print("-"*50, "\n\n")
 
     main()

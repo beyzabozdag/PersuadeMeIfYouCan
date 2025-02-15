@@ -2,11 +2,11 @@ import copy
 from openai import AzureOpenAI
 import os
 import random
-from persuasion_arena.agents.agents import Agent
+from pmiyc.agents.agents import Agent
 import time
-from persuasion_arena.constants import PERSUADEE, PERSUADER
+from pmiyc.constants import PERSUADEE, PERSUADER
 from copy import deepcopy
-from persuasion_arena.constants import MESSAGE_TAG
+from pmiyc.constants import MESSAGE_TAG
 
 class ChatGPTAgent(Agent):
     def __init__(
