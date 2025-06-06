@@ -1,4 +1,5 @@
 ## The Effect of Normalizing Persuasion Scores
+
 While absolute values offer useful insights, particularly about the directionality of opinion shifts, they are less suitable for comparative analysis across diverse conditions. Specifically, absolute change lacks consistency when comparing:
 
 - Different Persuadee models interacting with the same Persuader, or
@@ -8,61 +9,24 @@ To enable fair and meaningful comparisons, we introduce the normalized change (N
 
 For transparency, we include side-by-side results comparing normalized and absolute scores. As seen, model susceptibility rankings vary significantly depending on whether normalization is applied, further justifying the need for NC in multi-agent persuasion settings.
 
+---
 
-<figure style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="../images/single_turn_subjective.jpg" width="90%" />
-    <figcaption>Normalized change in agreement for single turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-  <div style="text-align: center;">
-    <img src="../images/single_turn_subjective_absolute.jpg" width="90%" />
-    <figcaption>Absolute change in agreement for single turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-</figure>
+| ![](../images/single_turn_subjective.jpg) | ![](../images/single_turn_subjective_absolute.jpg) |
+|:--:|:--:|
+| *Normalized change in agreement for single-turn persuasion with subjective claims.* | *Absolute change in agreement for single-turn persuasion with subjective claims.* |
 
-<figure style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="../images/multi_turn_subjective.jpg" width="90%" />
-    <figcaption>Normalized change in agreement for multi-turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-  <div style="text-align: center;">
-    <img src="../images/multi_turn_subjective_absolute.jpg" width="90%" />
-    <figcaption>Absolute change in agreement for multi-turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-</figure>
+| ![](../images/multi_turn_subjective.jpg) | ![](../images/multi_turn_subjective_absolute.jpg) |
+|:--:|:--:|
+| *Normalized change in agreement for multi-turn persuasion with subjective claims.* | *Absolute change in agreement for multi-turn persuasion with subjective claims.* |
 
+| ![](../images/multi_turn_misinformation.jpg) | ![](../images/multi_turn_misinformation_absolute.jpg) |
+|:--:|:--:|
+| *Normalized change in agreement for multi-turn persuasion with misinformation claims.* | *Absolute change in agreement for multi-turn persuasion with misinformation claims.* |
 
-<figure style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="../images/multi_turn_misinformation.jpg" width="90%" />
-    <figcaption>Normalized change in agreement for multi-turn persuasion with misinformation claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-  <div style="text-align: center;">
-    <img src="../images/multi_turn_misinformation_absolute.jpg" width="90%" />
-    <figcaption>Absolute change in agreement for multi-turn persuasion with misinformation claims across all persuader-persuadee pairs.</figcaption>
-  </div>
-</figure>
+| ![](../images/barplot_persuader.jpg) | ![](../images/barplot_persuader_absolute.jpg) |
+|:--:|:--:|
+| *Persuasive effectiveness (normalized change).* | *Persuasive effectiveness (absolute change).* |
 
-
-<figure style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="../images/barplot_persuader.jpg" width="90%" />
-    <figcaption>The persuasive effectiveness score calculated from the normalized change for each of the experimental setups.</figcaption>
-  </div>
-  <div style="text-align: center;">
-    <img src="../images/barplot_persuader_absolute.jpg" width="90%" />
-    <figcaption>The persuasive effectiveness score calculated from the absolute change for each of the experimental setups.</figcaption>
-  </div>
-</figure>
-
-
-<figure style="display: flex; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="../images/barplot_persuadee.jpg" width="90%" />
-    <figcaption>The persuasion susceptibility score calculated from the normalized change for each of the experimental setups.</figcaption>
-  </div>
-  <div style="text-align: center;">
-    <img src="../images/barplot_persuadee_absolute.jpg" width="90%" />
-    <figcaption>The persuasion susceptibility score calculated from the absolute change for each of the experimental setups.</figcaption>
-  </div>
-</figure>
+| ![](../images/barplot_persuadee.jpg) | ![](../images/barplot_persuadee_absolute.jpg) |
+|:--:|:--:|
+| *Persuasion susceptibility (normalized change).* | *Persuasion susceptibility (absolute change).* |
