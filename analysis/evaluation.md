@@ -11,22 +11,22 @@ For transparency, we include side-by-side results comparing normalized and absol
 
 <figure style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/single_turn_subjective.jpg" width="90%" />
+    <img src="../images/single_turn_subjective.jpg" width="90%" />
     <figcaption>Normalized change in agreement for single turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/single_turn_subjective_absolute.jpg" width="90%" />
+    <img src="../images/single_turn_subjective_absolute.jpg" width="90%" />
     <figcaption>Absolute change in agreement for single turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
   </div>
 </figure>
 
 <figure style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/multi_turn_subjective.jpg" width="90%" />
+    <img src="../images/multi_turn_subjective.jpg" width="90%" />
     <figcaption>Normalized change in agreement for multi-turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/multi_turn_subjective_absolute.jpg" width="90%" />
+    <img src="../images/multi_turn_subjective_absolute.jpg" width="90%" />
     <figcaption>Absolute change in agreement for multi-turn persuasion with subjective claims across all persuader-persuadee pairs.</figcaption>
   </div>
 </figure>
@@ -34,11 +34,11 @@ For transparency, we include side-by-side results comparing normalized and absol
 
 <figure style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/multi_turn_misinformation.jpg" width="90%" />
+    <img src="../images/multi_turn_misinformation.jpg" width="90%" />
     <figcaption>Normalized change in agreement for multi-turn persuasion with misinformation claims across all persuader-persuadee pairs.</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/multi_turn_misinformation_absolute.jpg" width="90%" />
+    <img src="../images/multi_turn_misinformation_absolute.jpg" width="90%" />
     <figcaption>Absolute change in agreement for multi-turn persuasion with misinformation claims across all persuader-persuadee pairs.</figcaption>
   </div>
 </figure>
@@ -46,11 +46,11 @@ For transparency, we include side-by-side results comparing normalized and absol
 
 <figure style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/barplot_persuader.jpg" width="90%" />
+    <img src="../images/barplot_persuader.jpg" width="90%" />
     <figcaption>The persuasive effectiveness score calculated from the normalized change for each of the experimental setups.</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/barplot_persuader_absolute.jpg" width="90%" />
+    <img src="../images/barplot_persuader_absolute.jpg" width="90%" />
     <figcaption>The persuasive effectiveness score calculated from the absolute change for each of the experimental setups.</figcaption>
   </div>
 </figure>
@@ -58,11 +58,11 @@ For transparency, we include side-by-side results comparing normalized and absol
 
 <figure style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/barplot_persuadee.jpg" width="90%" />
+    <img src="../images/barplot_persuadee.jpg" width="90%" />
     <figcaption>The persuasion susceptibility score calculated from the normalized change for each of the experimental setups.</figcaption>
   </div>
   <div style="text-align: center;">
-    <img src="/Users/beyzabozdag/Desktop/persuasion/PersuadeMeIfYouCan/images/barplot_persuadee_absolute.jpg" width="90%" />
+    <img src="../images/barplot_persuadee_absolute.jpg" width="90%" />
     <figcaption>The persuasion susceptibility score calculated from the absolute change for each of the experimental setups.</figcaption>
   </div>
 </figure>
