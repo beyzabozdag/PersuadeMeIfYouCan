@@ -1,5 +1,5 @@
 import copy
-from openai import AzureOpenAI
+from openai import AzureOpenAI, OpenAI
 import os
 import random
 from pmiyc.agents.agents import Agent
@@ -27,11 +27,22 @@ class ChatGPTAgent(Agent):
             if seed is None
             else seed
         )
+
+        # print(f"Using model: {self.model}")
+        api_version = "2024-02-15-preview" if "gpt-4o" in model.lower() else "2025-01-01-preview"
+        # print(f"Using API version: {api_version}")
+        
+        # if "qwen" in self.model.lower():
+        #     self.client = OpenAI(
+        #         api_key=os.getenv("QWEN_KEY"),
+        #     )
+
         self.client = AzureOpenAI( 
-            azure_endpoint = "endpoint",
-            api_key=os.getenv("AZURE_OPENAI_KEY"),
-            api_version="version"
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_KEY") if not self.model == "gpt-4o-IB" else os.getenv("IB_KEY"),
+            api_version=api_version,
         )
+
         self.temperature = temperature
         self.max_tokens = max_tokens
 
@@ -49,8 +60,21 @@ class ChatGPTAgent(Agent):
                 v = v.__class__.__name__
             setattr(result, k, deepcopy(v, memo))
         return result
+    
+    def _chat_reasoning(self):
+        chat = self.client.chat.completions.create(
+            model=self.model,
+            messages=self.conversation,
+            #max_completion_tokens=self.max_tokens,  # no max tokens defined as it was causing issues with the API
+            seed=self.seed,
+        )
+        return chat.choices[0].message.content
+        
 
     def chat(self):
+        if "gpt" not in self.model.lower():
+            return self._chat_reasoning()
+        
         chat = self.client.chat.completions.create(
             model=self.model,
             messages=self.conversation,

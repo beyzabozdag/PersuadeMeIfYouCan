@@ -365,6 +365,7 @@ class MisinformationGame(AlternatingGame):
     def get_initial_response(self):
         persuadee = self.players[1]
         persuadee_claim = self.claim
+        persuadee_question = self.question
         model_name = self.players[1].model
         response = None
 
@@ -378,9 +379,9 @@ class MisinformationGame(AlternatingGame):
             # check the model_beliefs.json file for the persuadee's initial ranking
             with open(self.belief_file, "r") as f:
                 data = json.load(f)
-                if model_name in data and persuadee_claim in data[model_name]:
+                if model_name in data and f"{persuadee_question} {persuadee_claim}" in data[model_name]:
                     print("Retrieving persuadee's initial ranking from model_beliefs.json")
-                    response = data[model_name][persuadee_claim]
+                    response = data[model_name][f"{persuadee_question} {persuadee_claim}"]
                     response_str = get_response_str(response, visible_ranks=self.visible_ranks)
 
                     # update agent history
@@ -396,7 +397,7 @@ class MisinformationGame(AlternatingGame):
                     data = json.load(f)
                     if model_name not in data:
                         data[model_name] = {}
-                    data[model_name][persuadee_claim] = response
+                    data[model_name][f"{persuadee_question} {persuadee_claim}"] = response
                     with open(self.belief_file, "w") as f:
                         json.dump(data, f, indent=4)
 

@@ -52,13 +52,26 @@ class LLamaChatAgent(Agent):
         return result
 
     def chat(self):
-        chat_completion = self.client.chat.completions.create(
-            model=self.model,
-            messages=self.conversation,
-            temperature=0.7,
-            max_tokens=self.max_tokens,
-            seed=self.seed,
-        )
+        if "qwen" in self.model.lower():
+            chat_completion = self.client.chat.completions.create(
+                model=self.model,
+                messages=self.conversation,
+                temperature=0.7,
+                max_tokens=self.max_tokens,
+                seed=self.seed,
+                extra_body={
+                    "chat_template_kwargs": {"enable_thinking": False},
+                }
+            )
+
+        else:
+            chat_completion = self.client.chat.completions.create(
+                model=self.model,
+                messages=self.conversation,
+                temperature=0.7,
+                max_tokens=self.max_tokens,
+                seed=self.seed,
+            )
         
         return chat_completion.choices[0].message.content
         
