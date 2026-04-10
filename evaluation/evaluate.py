@@ -13,6 +13,7 @@ MAP = {
     "meta-llama/Meta-Llama-3.1-8B-Instruct": "llama8b",
     "meta-llama/Meta-Llama-3.3-70B-Instruct": "llama70b",
     "Qwen/Qwen3-32B": "qwen32b",
+    "Qwen/Qwen3-4B": "qwen4b",
 }
 
 def create_df():
@@ -130,9 +131,9 @@ def analyze_results():
         norm_changes_persuader_neutral = []
 
         # get persuader beliefs: 
-        belief_file = f"{BELIEF_DIR}/{MAP[persuader]}.json"
-        with open(belief_file, 'r') as f:
-            beliefs = json.load(f)[persuader]
+        # belief_file = f"{BELIEF_DIR}/{MAP[persuader]}.json"
+        # with open(belief_file, 'r') as f:
+        #     beliefs = json.load(f)[persuader]
 
         for _, row in df[(df["ER_M"] == persuader) & (df["EE_M"] == persuadee)].iterrows():
             try:
@@ -141,7 +142,7 @@ def analyze_results():
                 # Parse scores
                 er_all = eval(row["ER_all"]) if isinstance(row["ER_all"], str) else row["ER_all"]
                 ee_all = eval(row["EE_all"]) if isinstance(row["EE_all"], str) else row["EE_all"]
-                ee_init = er_all[0]
+                ee_init = ee_all[0]
                 ee_final = ee_all[PERSUADEE_TURN_COUNT - 1]
 
                 # Persuader "None" score
@@ -176,12 +177,12 @@ def analyze_results():
                 else:
                     key = row["claim"]
         
-                if beliefs[key]["support_ranking_int"] < 3:
-                    norm_changes_persuader_oppose.append(normalized_change)
-                elif beliefs[key]["support_ranking_int"] > 3:
-                    norm_changes_persuader_support.append(normalized_change)
-                else:
-                    norm_changes_persuader_neutral.append(normalized_change)
+                # if beliefs[key]["support_ranking_int"] < 3:
+                #     norm_changes_persuader_oppose.append(normalized_change)
+                # elif beliefs[key]["support_ranking_int"] > 3:
+                #     norm_changes_persuader_support.append(normalized_change)
+                # else:
+                #     norm_changes_persuader_neutral.append(normalized_change)
 
             except Exception as e:
                 print(f"Error processing row {row}: {e}")
